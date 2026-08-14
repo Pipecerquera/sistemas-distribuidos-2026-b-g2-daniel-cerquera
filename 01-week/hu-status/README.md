@@ -36,5 +36,8 @@
 ## 6. Evidence links
 
 ## Resumen visual de la semana 1
+
 ![Resumen Semana 1](Session_01.jpg)
+## PDR de la semana 1
+[Ver PDR - BarberSaaS](PDR-BarberSaaS.md)
 -
