@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Strangler Fig Pattern — Infografía</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1E2A22;
+    --paper:#EAE8DA;
+    --card:#F6F4E9;
+    --bark:#6B4226;
+    --bark-dark:#4A2D19;
+    --moss:#2F4A3C;
+    --moss-light:#3C6B4A;
+    --vine:#178C7C;
+    --vine-light:#4FBFAE;
+    --gold:#C98A2E;
+    --line:#CBC6AE;
+    --red:#A6432F;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.55;
+  }
+  .sheet{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 0 80px 0;
+    position:relative;
+  }
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  h1,h2,h3{font-family:'Fraunces',serif; margin:0; color:var(--moss);}
+  a{color:inherit;}
+
+  /* ===== Vine spine running down the page ===== */
+  .spine{
+    position:absolute;
+    left:38px; top:0; bottom:0;
+    width:6px;
+    background:linear-gradient(to bottom, var(--bark) 0%, var(--bark) 18%, var(--moss-light) 50%, var(--vine) 82%, var(--vine-light) 100%);
+    border-radius:3px;
+    opacity:.55;
+  }
+  @media (max-width:700px){ .spine{ display:none; } }
+
+  /* ===== Header ===== */
+  header{
+    padding:56px 64px 40px 90px;
+    position:relative;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--bark-dark);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px; background:var(--bark-dark); display:inline-block;
+  }
+  h1{
+    font-size:56px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    line-height:1.02;
+  }
+  h1 em{
+    font-style:italic;
+    color:var(--vine);
+    font-weight:500;
+  }
+  .subtitle{
+    margin-top:18px;
+    font-size:17px;
+    max-width:560px;
+    color:var(--moss);
+  }
+  .latin{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:14px;
+    color:var(--bark-dark);
+    margin-top:10px;
+  }
+
+  /* ===== Hero botanical diagram ===== */
+  .hero-fig{
+    margin:8px 64px 8px 90px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:20px 24px 14px;
+  }
+  .hero-fig .cap{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--moss);
+    text-align:center;
+    margin-top:4px;
+    letter-spacing:.02em;
+  }
+
+  /* ===== Section shell ===== */
+  section{
+    padding:38px 64px 6px 90px;
+    position:relative;
+  }
+  .sec-head{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    margin-bottom:18px;
+  }
+  .sec-num{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13px;
+    color:var(--paper);
+    background:var(--moss);
+    padding:3px 8px;
+    border-radius:20px;
+  }
+  h2{ font-size:26px; font-weight:600; }
+  .sec-kicker{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--bark-dark);
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    margin-bottom:6px;
+  }
+
+  /* ===== Problem grid ===== */
+  .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  .leaf-card{
+    background:var(--card);
+    border-left:3px solid var(--bark);
+    border-radius:0 4px 4px 0;
+    padding:14px 16px;
+    font-size:14.5px;
+  }
+  .leaf-card b{ display:block; font-family:'Fraunces',serif; font-size:15.5px; font-weight:600; color:var(--bark-dark); margin-bottom:3px; }
+
+  /* ===== Origin narrative ===== */
+  .origin-box{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:24px;
+    align-items:center;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:20px 24px;
+  }
+  .origin-box p{ font-size:14.5px; margin:0 0 10px; }
+  .origin-box p:last-child{ margin-bottom:0; }
+  blockquote{
+    margin:14px 0 0;
+    padding-left:14px;
+    border-left:3px solid var(--vine);
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--moss);
+  }
+
+  /* ===== 3-step mechanism ===== */
+  .steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  .step{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:18px 16px 16px;
+    position:relative;
+  }
+  .step .num{
+    font-family:'Fraunces',serif;
+    font-size:34px;
+    font-weight:600;
+    color:var(--vine);
+    line-height:1;
+    margin-bottom:8px;
+  }
+  .step h3{ font-size:16.5px; color:var(--moss); margin-bottom:6px; }
+  .step p{ font-size:13.5px; margin:0; }
+  .step-arrow{
+    display:flex; align-items:center; justify-content:center;
+    color:var(--bark);
+    font-size:20px;
+  }
+  .steps-wrap{ display:grid; grid-template-columns:1fr auto 1fr auto 1fr; gap:6px; align-items:stretch; }
+  @media (max-width:700px){ .steps-wrap{ grid-template-columns:1fr; } .step-arrow{ transform:rotate(90deg); } }
+
+  /* ===== Support techniques ===== */
+  .tech-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  .tech-card{
+    background:var(--card);
+    border-radius:6px;
+    padding:14px 16px;
+    border-top:3px solid var(--vine);
+  }
+  .tech-card h3{ font-size:14.5px; color:var(--vine); margin-bottom:4px; font-weight:600; }
+  .tech-card p{ font-size:13px; margin:0; }
+
+  /* ===== Pros / cons ===== */
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+  .compare .col{ border-radius:6px; padding:16px 18px; }
+  .col.good{ background:#EAF0E3; border-left:4px solid var(--moss-light); }
+  .col.bad{ background:#F3E7DE; border-left:4px solid var(--red); }
+  .compare h3{ font-family:'IBM Plex Mono',monospace; font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; margin-bottom:10px; }
+  .col.good h3{ color:var(--moss-light); }
+  .col.bad h3{ color:var(--red); }
+  .compare ul{ margin:0; padding-left:18px; font-size:13.5px; }
+  .compare li{ margin-bottom:7px; }
+
+  /* ===== Selection criteria ===== */
+  .criteria{ display:flex; flex-direction:column; gap:10px; }
+  .crit-row{
+    display:grid; grid-template-columns:34px 1fr; gap:14px; align-items:start;
+    background:var(--card); border-radius:6px; padding:12px 16px;
+  }
+  .crit-row .dot{
+    width:34px; height:34px; border-radius:50%;
+    background:var(--gold); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces',serif; font-weight:600; font-size:15px;
+  }
+  .crit-row p{ margin:0; font-size:14px; }
+  .crit-row b{ font-family:'Fraunces',serif; color:var(--moss); }
+
+  /* ===== Footer ===== */
+  footer{
+    margin:44px 64px 0 90px;
+    padding-top:26px;
+    border-top:1px dashed var(--line);
+  }
+  footer .quote{
+    font-family:'Fraunces',serif;
+    font-size:19px;
+    font-style:italic;
+    color:var(--moss);
+    max-width:640px;
+    line-height:1.45;
+  }
+  .meta{
+    margin-top:22px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;
+    color:var(--bark-dark);
+    display:flex; gap:18px; flex-wrap:wrap;
+  }
+
+  @media (max-width:700px){
+    header,section{ padding-left:28px; padding-right:24px; }
+    .hero-fig, footer{ margin-left:28px; margin-right:24px; }
+    h1{ font-size:38px; }
+    .grid-2, .compare, .tech-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="spine"></div>
+
+  <header>
+    <div class="eyebrow">Sistemas distribuidos · patrones de migración</div>
+    <h1>Strangler <em>Fig</em> Pattern</h1>
+    <p class="latin">Ficus aurea — la higuera que envuelve, y con el tiempo reemplaza, al árbol que le dio soporte.</p>
+    <p class="subtitle">Cómo pasar de un monolito a microservicios pieza por pieza, sin reescrituras totales ni un único "gran día" de lanzamiento.</p>
+  </header>
+
+  <div class="hero-fig">
+    <svg viewBox="0 0 820 300" width="100%" role="img" aria-label="Tres fases de la migración: monolito puro, migración parcial y microservicios completos">
+      <!-- Panel 1 -->
+      <g>
+        <rect x="20" y="20" width="240" height="240" fill="none" stroke="#CBC6AE" stroke-width="1"/>
+        <!-- trunk -->
+        <rect x="120" y="60" width="40" height="190" rx="6" fill="#6B4226"/>
+        <rect x="120" y="60" width="40" height="190" rx="6" fill="none" stroke="#4A2D19" stroke-width="1"/>
+        <!-- tiny vine thread -->
+        <path d="M118 90 C100 110, 100 140, 118 160" fill="none" stroke="#178C7C" stroke-width="4" stroke-linecap="round"/>
+        <circle cx="112" cy="158" r="5" fill="#4FBFAE"/>
+        <text x="140" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="#2F4A3C">fase 1 · inicio</text>
+        <text x="140" y="270" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#6B4226">monolito 100%</text>
+      </g>
+      <!-- Panel 2 -->
+      <g>
+        <rect x="290" y="20" width="240" height="240" fill="none" stroke="#CBC6AE" stroke-width="1"/>
+        <rect x="390" y="60" width="40" height="190" rx="6" fill="#6B4226"/>
+        <rect x="390" y="60" width="40" height="190" rx="6" fill="none" stroke="#4A2D19" stroke-width="1"/>
+        <path d="M388 75 C365 100, 365 140, 388 165 C400 180, 400 210, 388 235" fill="none" stroke="#178C7C" stroke-width="7" stroke-linecap="round"/>
+        <path d="M432 90 C452 115, 452 150, 432 175" fill="none" stroke="#178C7C" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="380" cy="235" r="6" fill="#4FBFAE"/>
+        <circle cx="438" cy="172" r="6" fill="#4FBFAE"/>
+        <circle cx="366" cy="140" r="5" fill="#4FBFAE"/>
+        <text x="410" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="#2F4A3C">fase 2 · migración</text>
+        <text x="410" y="270" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#178C7C">convivencia 50/50</text>
+      </g>
+      <!-- Panel 3 -->
+      <g>
+        <rect x="560" y="20" width="240" height="240" fill="none" stroke="#CBC6AE" stroke-width="1"/>
+        <rect x="660" y="150" width="40" height="100" rx="6" fill="#8a6a52" opacity="0.55"/>
+        <path d="M645 60 C610 90, 610 140, 645 170 C670 195, 670 225, 645 250" fill="none" stroke="#178C7C" stroke-width="9" stroke-linecap="round"/>
+        <path d="M695 60 C725 90, 725 140, 695 170 C675 195, 675 225, 695 250" fill="none" stroke="#178C7C" stroke-width="9" stroke-linecap="round"/>
+        <path d="M660 55 C670 40, 690 40, 700 55" fill="none" stroke="#178C7C" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="645" cy="250" r="6" fill="#4FBFAE"/>
+        <circle cx="695" cy="250" r="6" fill="#4FBFAE"/>
+        <circle cx="612" cy="140" r="5" fill="#4FBFAE"/>
+        <circle cx="728" cy="140" r="5" fill="#4FBFAE"/>
+        <text x="680" y="40" text-anchor="middle" font-family="IBM Plex Mono" font-size="12" fill="#2F4A3C">fase 3 · destino</text>
+        <text x="680" y="270" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#178C7C">microservicios 100%</text>
+      </g>
+    </svg>
+    <div class="cap">el tronco (monolito) se desvanece a medida que la vid (microservicios) toma su lugar — la fachada decide, en cada momento, a quién enruta</div>
+  </div>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>El árbol huésped: por qué duele el monolito</h2></div>
+    <div class="grid-2">
+      <div class="leaf-card"><b>Acoplamiento fuerte</b>Un cambio pequeño obliga a recompilar y desplegar todo el sistema completo.</div>
+      <div class="leaf-card"><b>Escalado todo-o-nada</b>No puedes escalar solo el módulo con más carga; escalas la aplicación entera.</div>
+      <div class="leaf-card"><b>Despliegues lentos</b>Un error en un módulo bloquea el release de todos los demás.</div>
+      <div class="leaf-card"><b>Deuda técnica</b>Código antiguo, sin pruebas ni documentación, que nadie quiere tocar por miedo a romperlo.</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>La higuera y el árbol: origen del patrón</h2></div>
+    <div class="origin-box">
+      <svg viewBox="0 0 140 160" width="100%">
+        <rect x="55" y="20" width="24" height="130" rx="5" fill="#8a6a52" opacity="0.6"/>
+        <path d="M50 30 C25 55, 25 95, 50 115 C65 130, 65 145, 48 150" fill="none" stroke="#178C7C" stroke-width="6" stroke-linecap="round"/>
+        <path d="M88 40 C112 62, 112 98, 88 118" fill="none" stroke="#178C7C" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="48" cy="150" r="5" fill="#4FBFAE"/>
+        <circle cx="88" cy="118" r="5" fill="#4FBFAE"/>
+      </svg>
+      <div>
+        <p>Concepto acuñado por <b>Martin Fowler</b> en 2004. En la naturaleza, la higuera estranguladora germina en las ramas altas de otro árbol; sus raíces bajan poco a poco hasta el suelo y se van engrosando alrededor del tronco original, hasta que el árbol huésped muere y se descompone, dejando en pie solo la nueva estructura, autosuficiente.</p>
+        <p>En software: el monolito es el árbol huésped. El nuevo sistema (microservicios) crece alrededor de él, pieza por pieza, hasta que el monolito deja de ser necesario y se apaga.</p>
+        <blockquote>"Migración incremental que reemplaza un sistema legado interceptando y redirigiendo funcionalidad, sin reescritura total ni tiempo de inactividad."</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>El mecanismo: un ciclo de tres pasos</h2></div>
+    <div class="steps-wrap">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Interceptar</h3>
+        <p>Se coloca una <b>fachada / API gateway</b> delante del monolito. Todo el tráfico pasa primero por ahí. Al inicio, redirige el 100% al monolito.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Migrar</h3>
+        <p>Se elige una funcionalidad con fronteras claras y se reimplementa como <b>microservicio</b> independiente, con su propia base de datos.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Enrutar</h3>
+        <p>Ya probado el microservicio, se actualiza la fachada: esa funcionalidad va al servicio nuevo; el resto sigue en el monolito.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>Técnicas que sostienen el patrón</h2></div>
+    <div class="tech-grid">
+      <div class="tech-card"><h3>Branch by abstraction</h3><p>Se crea una interfaz sobre el módulo a migrar para cambiar su implementación por debajo sin tocar quién lo consume.</p></div>
+      <div class="tech-card"><h3>Feature toggles</h3><p>Banderas que activan o desactivan la nueva ruta sin desplegar código nuevo — rollback instantáneo si algo falla.</p></div>
+      <div class="tech-card"><h3>Shadow / parallel run</h3><p>La misma petición se envía al monolito y al microservicio a la vez; se compara la respuesta antes de confiar en la nueva.</p></div>
+      <div class="tech-card"><h3>Sincronización de datos</h3><p>Change Data Capture o eventos mantienen alineadas las dos fuentes de datos mientras ambos sistemas coexisten.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><h2>Lo que gana y lo que cuesta</h2></div>
+    <div class="compare">
+      <div class="col good">
+        <h3>Ventajas</h3>
+        <ul>
+          <li>Riesgo repartido en el tiempo: cada paso es pequeño y reversible.</li>
+          <li>El sistema sigue operando y recibiendo features durante la transición.</li>
+          <li>Resultados incrementales, fáciles de justificar ante el negocio.</li>
+        </ul>
+      </div>
+      <div class="col bad">
+        <h3>Riesgos</h3>
+        <ul>
+          <li>La fachada puede volverse un punto único de fallo si no se diseña bien.</li>
+          <li>Mantener dos sistemas en paralelo añade complejidad operativa temporal.</li>
+          <li>La migración puede quedar a medias indefinidamente si el negocio deja de priorizarla.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><h2>¿Por dónde empezar a cortar?</h2></div>
+    <div class="criteria">
+      <div class="crit-row"><div class="dot">1</div><p><b>Bajo riesgo, alto aprendizaje</b> — no empieces por el módulo más crítico del negocio.</p></div>
+      <div class="crit-row"><div class="dot">2</div><p><b>Fronteras de dominio claras</b> — funcionalidad poco acoplada al resto del monolito.</p></div>
+      <div class="crit-row"><div class="dot">3</div><p><b>Evita lo más usado primero</b> — deja el módulo de mayor tráfico para cuando el equipo tenga experiencia.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="quote">"No es borrar código viejo poco a poco: es una coexistencia controlada, donde una fachada decide gradualmente a quién entregar cada responsabilidad — hasta que el árbol huésped ya no tiene nada que sostener."</p>
+    <div class="meta">
+      <span>PATRÓN · MARTIN FOWLER, 2004</span>
+      <span>SISTEMAS DISTRIBUIDOS</span>
+      <span>MONOLITO → MICROSERVICIOS</span>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
