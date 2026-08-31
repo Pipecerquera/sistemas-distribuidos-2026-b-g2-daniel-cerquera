@@ -5,10 +5,10 @@
 # Weekly Status - Week 01
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME:
-- GITHUB_USER:
-- TEAM:
-- SPRINT_GOAL:
+- FULL_NAME:Daniel Felipe Cerquera Idrobo
+- GITHUB_USER: Pipecerquera
+- TEAM: Barbersaas
+- SPRINT_GOAL: Understand and document the main distributed architecture styles and their trade-offs.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
@@ -17,13 +17,19 @@
 | HU-XXX-001 |  |  |  |
 
 ## 2. My individual contribution
--
+-Researched and documented the main distributed architecture styles, including client-server, peer-to-peer, SOA and microservices.
+-Prepared the weekly visual summary to consolidate the concepts and their main trade-offs.
+-Organized and updated the Week 01 documentation in the repository.
 
 ## 3. Blockers and risks
--
+-No major blockers during the week.
+-The main risk was ensuring that the architectural concepts and their trade-offs were clearly summarized and represented in the weekly documentation.
 
 ## 4. Plan for next week
--
+-Study containerization with Docker.
+-Understand the differences between images, containers and registries.
+-Practice writing Dockerfiles and using Docker Compose for multi-service applications.
+-Document the concepts and evidence for Week 02.
 
 ## 5. Compliance self-check
 - [ ] Conventional Commits - `type(scope): summary`

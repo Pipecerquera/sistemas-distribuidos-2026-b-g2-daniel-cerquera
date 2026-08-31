@@ -5,10 +5,10 @@
 # Weekly Status - Week 02
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME:
-- GITHUB_USER:
-- TEAM:
-- SPRINT_GOAL:
+- FULL_NAME: Daniel Felipe Cerquera Idrobo
+- GITHUB_USER: Pipecerquera
+- TEAM: Barbersaas
+- SPRINT_GOAL: Understand and document the main distributed architecture styles and their trade-offs.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
@@ -17,6 +17,7 @@
 | HU-XXX-001 |  |  |  |
 
 ## 2. My individual contribution
+
 -
 
 ## 3. Blockers and risks
