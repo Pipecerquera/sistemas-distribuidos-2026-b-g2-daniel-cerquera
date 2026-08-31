@@ -34,4 +34,6 @@
 - [ ] No secrets; config via environment variables
 
 ## 6. Evidence links
--
+- https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
+
+![Resumen Semana 4](Week-04.jpg)

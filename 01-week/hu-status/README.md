@@ -38,7 +38,7 @@ https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.
 
 ## Resumen visual de la semana 1
 
-![Resumen Semana 1](Session_01.jpg)
+![Resumen Semana 1](Week-01.jpg)
 ## PDR de la semana 1
 [Ver PDR - BarberSaaS](PDR-BarberSaaS.md)
 -

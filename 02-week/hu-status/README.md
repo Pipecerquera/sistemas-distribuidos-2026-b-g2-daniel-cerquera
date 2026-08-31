@@ -35,3 +35,4 @@
 
 ## 6. Evidence links
 - https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
+ ![Resumen Semana 2](Week-02.jpg)
