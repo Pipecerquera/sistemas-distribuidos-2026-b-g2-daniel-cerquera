@@ -15,15 +15,20 @@
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
 | HU-000-001 | As a team, we want to document the BarberSaaS PRD (product scope, personas, functional/non-functional requirements) so that the rest of the project has a shared source of truth | done | https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/b74c7f0594723fe06d3bebf4c8c7a312bc403384 |
+| HU-000-002 | Session 1 — As a team, for each core BarberSaaS operation (booking, payment, inventory, loyalty, reminders, tenant onboarding, plan changes) we want to define the required consistency model and delivery semantics so that these choices can be defended in the MVP 1 design | done | [consistency-and-delivery-semantics.md](consistency-and-delivery-semantics.md) |
+| HU-000-003 | Session 2 — As a team, we want the `docs` repo created, the chosen architecture style recorded as an ADR, and the backlog drafted with testable (Gherkin) acceptance criteria so that MVP 1 has a documented, defensible design basis | done | docs repo: https://github.com/code-corhuila/barber-saas-docs — ADR: https://github.com/code-corhuila/barber-saas-docs/blob/main/05-architecture/decisions/records/ADR-002-modular-monolith.md — backlog with ACs: https://github.com/code-corhuila/barber-saas-docs/blob/main/04-requirements/user-stories.md |
 
 ## 2. My individual contribution
 -Researched and documented the main distributed architecture styles, including client-server, peer-to-peer, SOA and microservices.
 -Prepared the weekly visual summary to consolidate the concepts and their main trade-offs.
 -Organized and updated the Week 01 documentation in the repository.
+-Defined, per core BarberSaaS operation, the required consistency model and delivery semantics (`hu-status/consistency-and-delivery-semantics.md`), grounding the modular-monolith decision in which operations actually need strong consistency vs. which can tolerate eventual consistency.
+-As a team: created the `docs` repo (`barber-saas-docs`), recorded the chosen architecture style as an ADR, and drafted the backlog with Gherkin acceptance criteria per HU.
 
 ## 3. Blockers and risks
 -No major blockers during the week.
 -The main risk was ensuring that the architectural concepts and their trade-offs were clearly summarized and represented in the weekly documentation.
+-Naming note: the ADR that records the chosen architecture style (modular monolith) is numbered **ADR-002**, not ADR-001 — ADR-001 was already used earlier for the documentation-language decision (English for all docs/code). Flagging this so the numbering mismatch against the activity wording is explicit, not silently glossed over.
 
 ## 4. Plan for next week
 -Study containerization with Docker.
@@ -43,6 +48,10 @@
 - Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
 - PDR-BarberSaaS.md added: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/b74c7f0594723fe06d3bebf4c8c7a312bc403384
 - Week 1 visual summary added: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/6f704186cb10a1454b000411812619033c0274cb
+- Session 1 deliverable — consistency & delivery semantics per operation: [`consistency-and-delivery-semantics.md`](consistency-and-delivery-semantics.md)
+- Session 2 — `docs` repo created: https://github.com/code-corhuila/barber-saas-docs
+- Session 2 — ADR, chosen architecture style (modular monolith): https://github.com/code-corhuila/barber-saas-docs/blob/main/05-architecture/decisions/records/ADR-002-modular-monolith.md
+- Session 2 — backlog with testable (Gherkin) acceptance criteria: https://github.com/code-corhuila/barber-saas-docs/blob/main/04-requirements/user-stories.md
 
 ## Resumen visual de la semana 1
 
