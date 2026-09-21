@@ -51,6 +51,7 @@
 
 ## 6. Evidence links
 - Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
+- This week's infographic: `07-week/hu-status/Week-07.png` (in this same folder)
 - CODE (`barber-saas`), loyalty/notification wiring: https://github.com/code-corhuila/barber-saas/commit/122b362
 - CODE, MVP 1 still stalled: `main` at https://github.com/code-corhuila/barber-saas/commit/4e5ab0a (2026-09-03, unchanged since Week 05)
 - CODE, config-via-env fix in progress (uncommitted working-tree diff, verified via `git status`/`git diff` today): `barbersaas-backend/barbersaas-backend/docker-compose.yml`, `.../application.yml`, new `.../.env.example`
@@ -60,3 +61,5 @@
 - DOCS, SPEC-004 (pushed, pending PR/merge): https://github.com/code-corhuila/barber-saas-docs/commit/34981fa on branch https://github.com/code-corhuila/barber-saas-docs/tree/docs/004-align-api-contracts
 - DOCS, instructor's new CODEOWNERS gate on `main`: https://github.com/code-corhuila/barber-saas-docs/commit/19bd6ce
 - Pending items honestly tracked in "Blockers and risks" above
+
+![Resumen Semana 7](Week-07.png)
