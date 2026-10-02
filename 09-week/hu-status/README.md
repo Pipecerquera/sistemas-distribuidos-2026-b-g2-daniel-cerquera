@@ -63,11 +63,11 @@
 
 ## 5. Compliance self-check
 - [x] Conventional Commits - `type(scope): summary` — every DOCS merge this week (`8c1d057`, `16152b3`, `d6db217`, `5e2d807`, `ee2c8d9`, `8fc0eb5`, `f6321e2`, `acf749d`, `f5251c2`, `74ff15b`, `e333bee`) follows `type(scope): summary`, and so do the five `docs(diagrams): …` merges of PRs #44–#48 (`20c3f58`, `0906748`, `e2f5106`, `3d440c5`, `1481114`).
-- [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...) — DOCS used `docs/NNN-slug` branches with one PR each to `main`, approved by the teacher's review; the `hu-xxx-*` naming is not used. No CODE work yet this week.
+- [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...) — partly: every code change went through a child branch (`feat/`, `chore/`, `test/`) and a PR to `develop` (22 PRs), and DOCS through `docs/NNN-slug` PRs to `main`; the `hu-xxx-*` naming of this template is not used (the norm's prefixes are).
 - [ ] Testable acceptance criteria — not yet for the hardening stories; slicing them with testable criteria is exactly HU-000-023.
-- [ ] Tests added/updated (unit / integration) — none; this week's work so far is documentation only.
-- [x] DDD / hexagonal boundaries respected (domain has no I/O) — PR #41 makes the hexagonal layout the documented rule for every service; no domain code touched.
-- [ ] No secrets; config via environment variables — **not met, real gap**: see Blockers (`POSTGRES_PASSWORD`, `JWT_SECRET` in `docker-compose.yml`, default secret in `application.yml`).
+- [x] Tests added/updated (unit / integration) — 21 Java tests in `identity-auth-api`, 13 in the shell and 9 in the sign-in app (unit), the gateway's 14 smoke checks, and the schema rebuild in `identity-auth-db`; all run in CI on every PR.
+- [x] DDD / hexagonal boundaries respected (domain has no I/O) — PR #41 makes it the rule; `identity-auth-core` declares no Spring dependency, so a framework annotation in the domain does not compile.
+- [ ] No secrets; config via environment variables — **met in the polyrepo, not in the prototype**: the new repositories version only `.env.example` files and fail fast on missing secrets; `barber-saas` still has `POSTGRES_PASSWORD` and `JWT_SECRET` in `docker-compose.yml` and a default secret in `application.yml`.
 
 ## 6. Evidence links
 - Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
