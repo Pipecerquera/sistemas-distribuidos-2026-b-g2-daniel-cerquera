@@ -37,6 +37,7 @@
 - **Where the hardening goes is undecided**: ADR-004 moves the real deliverable to the 29-repo polyrepo, but those repos only contain README + CODEOWNERS (seeded 2026-09-14). Hardening `barber-saas` vs. starting in the polyrepo (e.g. `identity-auth-api`) is still an open decision.
 - **MVP 1 still not shipped** (5th week): `main` at `4e5ab0a`, no tag.
 - **Doc-to-doc divergences found in 08 (D-1…D-4)**: OQ-12's step order vs. `chk_app_user_tenant`, no schedule port in appointment-api's hexagonal layout, `domain-events.md` still describing the prototype, and the undecided event transport (AT-004).
+- **The 29 polyrepo READMEs still describe another project**: the seeded `README.md` of every repository says "LMS Library" and links `library-docs` instead of BarberSaaS — it needs a `chore/` PR in each repository.
 - **DOCS open items waiting on the teacher**: ADR-008 (framework, `-app` mobile) and ADR-009 (saga state) stay *Proposed* until the questions in PR #32 are answered. Tracker package E (wireframes) needs mockups from the team.
 
 ## 4. Plan for next week
@@ -61,7 +62,6 @@
 - DOCS, Norm 2026-B alignment: https://github.com/code-corhuila/barber-saas-docs/pull/28, https://github.com/code-corhuila/barber-saas-docs/pull/30, https://github.com/code-corhuila/barber-saas-docs/pull/32
 - DOCS, teacher tracker packages A–D: https://github.com/code-corhuila/barber-saas-docs/pull/36 … https://github.com/code-corhuila/barber-saas-docs/pull/42
 - DOCS, section `08-diagrams` (approved and merged): https://github.com/code-corhuila/barber-saas-docs/issues/43 · https://github.com/code-corhuila/barber-saas-docs/pull/44 … https://github.com/code-corhuila/barber-saas-docs/pull/48
-- DOCS, teammates' merged PRs this week: [#33](https://github.com/code-corhuila/barber-saas-docs/pull/33) and [#34](https://github.com/code-corhuila/barber-saas-docs/pull/34) (carlosleal16, shared API contract), [#35](https://github.com/code-corhuila/barber-saas-docs/pull/35) (JUANDAX233, five domain OpenAPI contracts)
 - CODE, hardcoded secrets still on `develop`: `barbersaas-backend/barbersaas-backend/docker-compose.yml` (lines 8 and 45) at https://github.com/code-corhuila/barber-saas/tree/develop
 - CODE, last config fix (mail credentials): https://github.com/code-corhuila/barber-saas/commit/72c622f
 
