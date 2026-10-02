@@ -56,6 +56,9 @@
 - Write the Session 09-2 plans in DOCS: secrets plan (owners + rotation), feature-flag policy (naming, owner, removal date) and a canary + rollback plan for one MVP 2 feature, and slice the hardening stories with testable acceptance criteria.
 - Resolve divergences D-1…D-4 of `08-diagrams/diagram-index.md` in their own documents (starting with OQ-12's step order).
 - Confirm the exposed mail credential was rotated outside the repo.
+- Specify and build owner onboarding: the saga contract and the internal operations in DOCS first (closes OQ-12), then the saga in `barber-saas-workflow`, the internal owner creation and barber creation in `identity-auth-api`, and the owner registration screen in `identity-auth-app`.
+- Integrate the teammates' domains as they arrive (their lines in `infra`, routes in the gateway, entries in the shell) and test the whole app in a browser.
+- Merge DOCS #64 and #70 once approved, and close divergence D-7 in `08-diagrams`.
 - Session 10: persistence, then the MVP 2 release.
 
 ## 5. Compliance self-check
