@@ -8,7 +8,7 @@
 - FULL_NAME: Daniel Felipe Cerquera Idrobo
 - GITHUB_USER: Pipecerquera
 - TEAM: Barbersaas
-- SPRINT_GOAL: Close the teacher's DOCS consistency tracker (07↔06↔05) so the documentation describes the ADR-004 polyrepo instead of the old monolith, then harden configuration for MVP 2 — `.env.example` + fail-fast validation of required vars, secrets injected (never in git), a pre-commit secret scan and at least one feature flag — and turn that into a secrets plan, a feature-flag policy and a canary + rollback plan with testable hardening stories.
+- SPRINT_GOAL: Close the teacher's DOCS consistency tracker (07↔06↔05) so the documentation describes the ADR-004 polyrepo instead of the old monolith, then harden configuration for MVP 2 — `.env.example` + fail-fast validation of required vars, secrets injected (never in git), a pre-commit secret scan and at least one feature flag — and turn that into a secrets plan, a feature-flag policy and a canary + rollback plan with testable hardening stories. Mid-week the teacher released Annex J of the norm (single database per engine, two backend languages, React and Angular), so the goal grew: record those decisions and start the migration of the prototype to the 29 repositories, with the platform and the identity slice (register and log in end to end) as my part.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
