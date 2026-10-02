@@ -42,11 +42,14 @@
 ## 3. Blockers and risks
 - **Secrets are still in git (Session 09-1 core item)**: `barber-saas` `develop` hardcodes `POSTGRES_PASSWORD: root` and a literal `JWT_SECRET` in `docker-compose.yml`, and `application.yml` falls back to a default `JWT_SECRET` instead of failing at startup. The Gmail password removed in `72c622f` is still in the git history, and its rotation hasn't been confirmed.
 - **No pre-commit secret scan and no feature flag exist in any repo yet**, so there is nothing to base the Session 09-2 flag policy and canary plan on until at least one is built.
-- **Where the hardening goes is undecided**: ADR-004 moves the real deliverable to the 29-repo polyrepo, but those repos only contain README + CODEOWNERS (seeded 2026-09-14). Hardening `barber-saas` vs. starting in the polyrepo (e.g. `identity-auth-api`) is still an open decision.
+- **Hardening moved to the polyrepo** (decided 2026-10-02): the new repositories already follow it (see HU-000-017); the prototype keeps its gaps until it is retired.
 - **MVP 1 still not shipped** (5th week): `main` at `4e5ab0a`, no tag.
 - **Doc-to-doc divergences found in 08 (D-1…D-4)**: OQ-12's step order vs. `chk_app_user_tenant`, no schedule port in appointment-api's hexagonal layout, `domain-events.md` still describing the prototype, and the undecided event transport (AT-004).
 - **The 29 polyrepo READMEs still describe another project**: the seeded `README.md` of every repository says "LMS Library" and links `library-docs` instead of BarberSaaS — it needs a `chore/` PR in each repository.
-- **DOCS open items waiting on the teacher**: ADR-008 (framework, `-app` mobile) and ADR-009 (saga state) stay *Proposed* until the questions in PR #32 are answered. Tracker package E (wireframes) needs mockups from the team.
+- **DOCS open items waiting on the teacher**: ADR-013 (#64, supersedes ADR-008) and the rebase policy (#70) need approval; #64 lost its first approval when the PR it depended on was merged first, and had to be requested again. ADR-009 (saga state) stays *Proposed*. Tracker package E (wireframes) needs mockups from the team.
+- **No barbershop owner or barber can be created yet**: identity-auth only registers clients. Owner self-registration (HU-AUTH-003) crosses two domains and needs the onboarding saga in `barber-saas-workflow` (OQ-12, still open); there is no contract yet for an owner to create barbers. Without them the booking flow cannot be shown end to end with real data.
+- **`barber-saas-infra-mongo` does not exist**: Annex J makes it mandatory and only the teacher can create it (asked in #59); `notifications` (MongoDB) waits for it.
+- **The shell and the sign-in app have not been tested together in a browser yet**: each part is verified on its own; how the app is delivered (browser or Android APK through Capacitor) is still to decide.
 
 ## 4. Plan for next week
 - Finish Session 09-1 in code: move `JWT_SECRET`/`POSTGRES_PASSWORD` to env vars, make the service fail fast when a required var is missing, add a pre-commit secret scanner, and put one new capability behind a default-off feature flag.
