@@ -5,33 +5,71 @@
 # Weekly Status - Week 10
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME:
-- GITHUB_USER:
-- TEAM:
-- SPRINT_GOAL:
+- FULL_NAME: Daniel Felipe Cerquera Idrobo
+- GITHUB_USER: Pipecerquera
+- TEAM: Barbersaas
+- SPRINT_GOAL: Persistence in distributed systems, applied to BarberSaaS: close phase 1 of the migration as a working Android app, then build my part of phase 2 — events through the outbox pattern without a broker (ADR-016 and the `worker`), the platform administration domain (plans, barbershops, trial expiration), the owner-onboarding saga with a new compensated step, the single MongoDB instance, and the shell loading the Angular domain apps — each specified in DOCS first, built in small pull requests, and tested end to end on the running platform.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
-| HU-XXX-001 |  |  |  |
+| HU-000-030 | Carried over — As a prospective barbershop owner, I want to register my barbershop myself from the app, so I start a 60-day trial (HU-AUTH-003, DOCS [#7](https://github.com/code-corhuila/barber-saas-docs/issues/7)) | **done — tested end to end on the platform and in the Android emulator** | DOCS #73–#75 approved and merged (2026-10-05); the saga completes since barbershop's internal operations landed; see HU-000-040 for the plan step |
+| HU-000-032 | As a CLIENT, I want my session bound to the barbershop I pick, so I book only where I chose (closes OQ-07) | **done** | DOCS [#77](https://github.com/code-corhuila/barber-saas-docs/pull/77) · identity-auth-api [#13](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/13) · front [#6](https://github.com/code-corhuila/barber-saas-front/pull/6) |
+| HU-000-033 | As the team, we want how one domain shows another's data decided, so no service reads another's schema (ADR-014 snapshot, ADR-015 busy slots; closes OQ-08, OQ-09) | **done** | DOCS [#78](https://github.com/code-corhuila/barber-saas-docs/pull/78) · identity-auth-api [#14](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/14) (`GET /internal/v1/users/{id}`) |
+| HU-000-034 | As a user, I want the app installed on Android with every domain app inside, so it works without development servers (ADR-013) — closes phase 1 | **done** | front [#7](https://github.com/code-corhuila/barber-saas-front/pull/7) [#8](https://github.com/code-corhuila/barber-saas-front/pull/8) [#10](https://github.com/code-corhuila/barber-saas-front/pull/10) [#11](https://github.com/code-corhuila/barber-saas-front/pull/11) · identity-auth-app [#7](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/7) · schedule-app [#12](https://github.com/code-corhuila/barber-saas-schedule-app/pull/12) |
+| HU-000-035 | As the team, we want the infrastructure Annex J asks for: `barber-saas-infra-postgres` (renamed) and the single MongoDB instance in `barber-saas-infra-mongo`, and every README naming BarberSaaS | **done** | DOCS [#79](https://github.com/code-corhuila/barber-saas-docs/pull/79) · infra-mongo [#1](https://github.com/code-corhuila/barber-saas-infra-mongo/pull/1) [#2](https://github.com/code-corhuila/barber-saas-infra-mongo/pull/2) [#3](https://github.com/code-corhuila/barber-saas-infra-mongo/pull/3) · infra-postgres [#16](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/16) [#23](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/23) · header PRs in my 11 repositories (e.g. worker [#2](https://github.com/code-corhuila/barber-saas-worker/pull/2)) |
+| HU-000-036 | As the team, we want how domain events travel decided and contracted, so loyalty and notifications receive appointment's events reliably (outbox pattern; closes AT-004, D-3) | **done — 6 PRs approved by the teacher and merged** | ADR-016 [#82](https://github.com/code-corhuila/barber-saas-docs/pull/82) · envelope and consumers [#83](https://github.com/code-corhuila/barber-saas-docs/pull/83) · OQ-10 and trial expiry [#84](https://github.com/code-corhuila/barber-saas-docs/pull/84) · routing table [#85](https://github.com/code-corhuila/barber-saas-docs/pull/85) · appointment's outbox operations [#86](https://github.com/code-corhuila/barber-saas-docs/pull/86) · loyalty and identity-auth outboxes, `processed_event` [#87](https://github.com/code-corhuila/barber-saas-docs/pull/87) |
+| HU-000-037 | As the platform, I want a worker that relays every outbox and runs the daily jobs, so events reach their consumers at least once and reminders, no-shows and trial expiry run on time (HU-NOTIF-001 [#5](https://github.com/code-corhuila/barber-saas-docs/issues/5), HU-APPT-002 [#8](https://github.com/code-corhuila/barber-saas-docs/issues/8), HU-SADMIN-002 [#24](https://github.com/code-corhuila/barber-saas-docs/issues/24)) | **done** | worker [#4](https://github.com/code-corhuila/barber-saas-worker/pull/4) [#5](https://github.com/code-corhuila/barber-saas-worker/pull/5) [#6](https://github.com/code-corhuila/barber-saas-worker/pull/6) [#7](https://github.com/code-corhuila/barber-saas-worker/pull/7) [#8](https://github.com/code-corhuila/barber-saas-worker/pull/8) · infra-postgres [#21](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/21) |
+| HU-000-038 | As a SUPER_ADMIN, I want to manage subscription plans and barbershops (status, plan, trial), and have expired trials suspended automatically (HU-SADMIN-001 [#12](https://github.com/code-corhuila/barber-saas-docs/issues/12), HU-SADMIN-002 [#24](https://github.com/code-corhuila/barber-saas-docs/issues/24)) | **done** | platform-admin-db [#3](https://github.com/code-corhuila/barber-saas-platform-admin-db/pull/3) · platform-admin-api [#3](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/3)–[#7](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/7) · platform-admin-app [#3](https://github.com/code-corhuila/barber-saas-platform-admin-app/pull/3)–[#7](https://github.com/code-corhuila/barber-saas-platform-admin-app/pull/7) · api-gateway [#10](https://github.com/code-corhuila/barber-saas-api-gateway/pull/10) · front [#12](https://github.com/code-corhuila/barber-saas-front/pull/12) · infra-postgres [#15](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/15) [#19](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/19) [#20](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/20) |
+| HU-000-039 | As a user who forgot the password, I want a 6-digit code to set a new one, sent without losing it if a service is down (HU-AUTH-002, DOCS [#6](https://github.com/code-corhuila/barber-saas-docs/issues/6)) | **doing — my part done; the e-mail is Carlos's** | identity-auth-db [#7](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/7) · identity-auth-api [#16](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/16) [#17](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/17) [#18](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/18) [#19](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/19) · worker [#7](https://github.com/code-corhuila/barber-saas-worker/pull/7). notifications-api still has to send the e-mail (`DEC-NOTIF-01`) |
+| HU-000-040 | As a prospective owner, I want to pick an active plan when I register, as in the prototype (FR-004, HU-AUTH-003) | **done** | DOCS [#89](https://github.com/code-corhuila/barber-saas-docs/pull/89) (approved and merged) · platform-admin-api [#8](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/8) · workflow [#13](https://github.com/code-corhuila/barber-saas-workflow/pull/13) · identity-auth-app [#8](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/8) [#9](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/9) |
+| HU-000-041 | As an owner or a client, I want a tab per Angular domain app, so I reach finances and loyalty from the app (ADR-013) | **doing — Finanzas mounted; Fidelidad waits for loyalty-app** | front [#12](https://github.com/code-corhuila/barber-saas-front/pull/12) (Angular host, Plataforma) · [#15](https://github.com/code-corhuila/barber-saas-front/pull/15) (Finanzas) |
+| HU-000-042 | As the team, we want DOCS to describe the system that runs: service catalog, C4-02 and SEQ-03 with the worker, and the traceability matrix with the real tests (closes AT-006, AT-007, AT-008, D-4) | **doing — 3 PRs awaiting the teacher** | DOCS [#90](https://github.com/code-corhuila/barber-saas-docs/pull/90) · [#92](https://github.com/code-corhuila/barber-saas-docs/pull/92) · [#93](https://github.com/code-corhuila/barber-saas-docs/pull/93) |
+| HU-000-017 | Carried over — hardened config (`.env.example`, fail-fast, secret scan, a feature flag) | doing (unchanged in the prototype) | Every new repository this week ships only `.env.example`/`env/*.env.example`, fails fast on a missing secret (`${VAR:?}`) and keeps keys out of git (`dev-keys.sh` writes them locally); still no pre-commit secret scan or feature flag |
+| HU-000-011 | Carried over — ship MVP 1 to `main` with a tag | doing (unchanged) | Promotion to `qa`/`main` is pending the team's decision; it will go by `cherry-pick -x` per user story |
 
 ## 2. My individual contribution
--
+- **Closed phase 1 as a real Android app.** Packaged the Angular shell with every React domain app inside the APK, so it runs without development servers; gave the shell the prototype's look (dark theme, bottom tabs per role) and the Android back button; built and tested it on the emulator with JDK 21.
+- **Specified events before building them (SDD).** ADR-016: no broker — each producer keeps its outbox, and a worker reads it through an internal operation of the producer and delivers it over internal HTTP, at least once, with idempotent consumers. Then the contracts: the shared `EventEnvelope`, the consumers' `POST /internal/v1/events`, the outbox operations of appointment, loyalty and identity-auth, the routing table and `processed_event` (DOCS #82–#87, all approved).
+- **Built the worker** (Python 3.12, standard library only, hexagonal with `import-linter`): outbox relay every 5 s (50 events, 30 s per run, 8 attempts with exponential back-off and jitter, a 4xx fails at once, `published` only when every consumer answered 2xx), the daily jobs (`reminders-due` 18:00, `no-shows` 01:00, `trials/expire` 02:00), and `CONSUMERS` so a service can publish before it consumes. 21 tests.
+- **Built the platform-admin domain end to end**: the `platform_admin` schema with its plan seed, the Java service (plans, barbershops through barbershop's internal operations, `DEC-PLAT-02`, trial expiry; 46 tests), and the first Ionic Angular domain app, which became the template Carlos and Juan Pablo copied.
+- **Stood up MongoDB** as Annex J asks: one instance (replica set `rs0` with a key file) in `infra-mongo`, the `notifications_app` user, included by `infra-postgres`, with the notifications database migrated by its own runner. Checked that notifications lives only in MongoDB and the seven other domains only in PostgreSQL.
+- **Password reset through the outbox** (`DEC-AUTH-08`): the code is stored only as a hash, its event commits in the same transaction, and the code is erased from the outbox row once published. 74 tests in identity-auth-api.
+- **Found and fixed a gap between the prototype and the contracts**: the prototype asked for a plan at sign-up, the saga had lost it. Specified a new saga step, `assign-plan`, run by platform-admin with its compensation (`PLAN_NOT_AVAILABLE` removes the barbershop), and built it in the workflow, platform-admin and the sign-up screen.
+- **Tested everything on the running platform** (13 containers): an appointment confirmation and a loyalty sticker reach the client's inbox through the worker; a sign-up on the Pro plan completes and a retired plan is compensated; the SUPER_ADMIN suspends and assigns plans; the reset code works once and disappears from the outbox.
+- Kept every applied Liquibase changeset untouched (new changesets only), and merged 94 pull requests since 2026-10-05 (the first ones of that Monday were already listed in week 09), each with CI green and under 400 changed lines.
 
 ## 3. Blockers and risks
--
+- **loyalty does not receive events yet** (Juan Pablo, L-3, DOCS #91): until it does, the worker holds `AppointmentCompleted`, so the automatic sticker and the completion notice wait.
+- **The password-reset e-mail is not sent** (Carlos, `DEC-NOTIF-01`): the code reaches notifications, which only stores an in-app notice.
+- **Push notifications need a Firebase project** and its `google-services.json`, which is never versioned; F-4 waits for that decision.
+- **loyalty-app and the finance screens are not built yet** (Juan Pablo): the Finanzas tab opens an empty app, and Fidelidad cannot be mounted.
+- MVP 1/2 not promoted to `qa`/`main` yet.
 
 ## 4. Plan for next week
--
+- Turn on loyalty as a consumer (`CONSUMERS: loyalty,notifications`) as soon as L-3 lands, and mount the Fidelidad tab when loyalty-app exists.
+- Push notifications (F-4) once the Firebase project exists.
+- Merge DOCS #90, #92 and #93 when the teacher approves them.
+- Full end-to-end test in the emulator for the four roles, then the release to `qa`/`main` by `cherry-pick -x`.
 
 ## 5. Compliance self-check
-- [ ] Conventional Commits - `type(scope): summary`
-- [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...)
-- [ ] Testable acceptance criteria
-- [ ] Tests added/updated (unit / integration)
-- [ ] DDD / hexagonal boundaries respected (domain has no I/O)
-- [ ] No secrets; config via environment variables
+- [x] Conventional Commits - `type(scope): summary` — every commit of this week's pull requests (e.g. `feat(relay): relay loyalty's outbox before loyalty consumes events`, `feat(saga): assign the plan the owner picked during onboarding`).
+- [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...) — partly: every change went through a child branch (`feat/`, `fix/`, `test/`, `chore/`) and a PR to `develop`, DOCS through `docs/NNN-slug` to `main`; the `hu-xxx-*` naming is not used.
+- [x] Testable acceptance criteria — each contract change carries its decision and the cases it must answer (e.g. `DEC-WF-05`: a retired plan ends `COMPENSATED` with `PLAN_NOT_AVAILABLE`), and each one has a test.
+- [x] Tests added/updated (unit / integration) — worker 21, platform-admin-api 46, identity-auth-api 74, workflow 43, identity-auth-app 23, shell 30; schema rebuilds in CI; all run on every PR.
+- [x] DDD / hexagonal boundaries respected (domain has no I/O) — three Maven modules per Java service (the core has no Spring) and `import-linter` contracts in the worker.
+- [x] No secrets; config via environment variables — only `.env.example` files are versioned; tokens and keys are generated locally by `dev-keys.sh`.
 
 ## 6. Evidence links
--
+- Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
+- This week's infographic: `10-week/hu-status/Week-10.jpg` (in this same folder)
+- DOCS, events (ADR-016 and contracts): https://github.com/code-corhuila/barber-saas-docs/pull/82 … https://github.com/code-corhuila/barber-saas-docs/pull/87
+- DOCS, plan at sign-up: https://github.com/code-corhuila/barber-saas-docs/pull/89
+- DOCS, awaiting approval: https://github.com/code-corhuila/barber-saas-docs/pull/90 · https://github.com/code-corhuila/barber-saas-docs/pull/92 · https://github.com/code-corhuila/barber-saas-docs/pull/93
+- Worker: https://github.com/code-corhuila/barber-saas-worker/pulls?q=is%3Amerged
+- Platform admin: https://github.com/code-corhuila/barber-saas-platform-admin-api/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-platform-admin-app/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-platform-admin-db/pulls?q=is%3Amerged
+- MongoDB: https://github.com/code-corhuila/barber-saas-infra-mongo/pulls?q=is%3Amerged
+- Shell and Android app: https://github.com/code-corhuila/barber-saas-front/pulls?q=is%3Amerged
+
+![Resumen Semana 10](Week-10.jpg)
