@@ -71,5 +71,16 @@
 - DOCS, teammate PRs open this week (evidence the team isn't single-author anymore): [`#15`](https://github.com/code-corhuila/barber-saas-docs/pull/15) (carloslealm), [`#17`](https://github.com/code-corhuila/barber-saas-docs/pull/17) (JUANDAX233), [`#18`](https://github.com/code-corhuila/barber-saas-docs/pull/18) (Carolay Arraut Heredia)
 - DOCS, product backlog gap (evidence Session 08 stories don't exist yet): `03-product/product-backlog.md`
 - Pending items honestly tracked in "Blockers and risks" above
+- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+  - Pull requests: **1** (1 merged).
+  - `barber-saas-docs` (1):
+    - [#16](https://github.com/code-corhuila/barber-saas-docs/pull/16) docs(api): apply SPEC-004 + SPEC-008 — align API contracts with real auth and declare open questions — merged 2026-09-24
+  - Direct commits without a pull request (**5**, before the PR flow was mandatory):
+    - [`fead52a`](https://github.com/code-corhuila/barber-saas-docs/commit/fead52a) `barber-saas-docs` — docs(api): apply SPEC-004 + SPEC-008 — align API contracts with real auth and declare open questions (#16) (2026-09-24)
+    - [`eceee3f`](https://github.com/code-corhuila/barber-saas-docs/commit/eceee3f) `barber-saas-docs` — docs(api): translate auth-service.yaml to English, trim pedagogical note (2026-09-24)
+    - [`9baf72c`](https://github.com/code-corhuila/barber-saas-docs/commit/9baf72c) `barber-saas-docs` — fix(api): correct notification-service.yaml planned server URLs (2026-09-24)
+    - [`3034740`](https://github.com/code-corhuila/barber-saas-docs/commit/3034740) `barber-saas-docs` — docs(api): address reviewer recommendations on api-gateway removal and notification naming (2026-09-24)
+    - [`47bbe9b`](https://github.com/code-corhuila/barber-saas-docs/commit/47bbe9b) `barber-saas-docs` — docs(api): declare open questions with owner and closing criterion (2026-09-24)
+- *End of the complete record.*
 
 ![Resumen Semana 8](week-08.jpg)
