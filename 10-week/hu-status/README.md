@@ -47,6 +47,7 @@
 - **Answered every recommendation of the automated review** on my pull requests, in writing: applied the valid ones as new commits (e.g. a TTL and an `eventType` enum for `processed_event`, rollback order in appointment-db), and justified the rest; code findings of the release went to the MVP 3 backlog (DOCS #111).
 - **Released MVP 2 in my 12 repositories**: CI rules the teacher set, a generated `CHANGELOG.md`, and the promotion `develop` → `qa` → `release.2.0.0` → `main` with `cherry-pick -x` (340 commits), checking each time that no commit lacks its trail, that every cited SHA exists in its source branch (norm 10.5) and that the tree is identical; then tagged `v2.0.0` with a GitHub Release. Wrote the step-by-step prompts so Carlos and Juan Pablo release their 18 repositories the same way, after a local dry run showed none of them conflicts.
 - **Closed the team's release** (2026-10-08/09): merged, verified and tagged Juan Pablo's 9 repositories with his agreement; for Carlos's 9, once the teacher approved and Carlos merged them, checked that each `main` tree equals `release.2.0.0`, then created the annotated `v2.0.0` tag and the GitHub Release (notes from each `CHANGELOG.md`). Answered the 48 findings of the automated review on his 9 pull requests — first checking in the code the ones the bot could not confirm (the idempotency key reaches the request, only the worker may post events, the device token and its key share one MongoDB transaction) — and recorded the real defects, including a critical one in barbershop-app (an account left without a profile if the second step fails), as MVP 3 backlog in DOCS #111. Built the single delivery zip of the 31 `v2.0.0` source archives, and checked that it runs as delivered: unpacked with the repositories' full names in an empty folder, `./scripts/up.sh dev` brought the 13 containers up healthy on a new volume in 2 min 36 s, and the four-role check passed 31 of 31 (saga with the chosen plan, booking without double booking, the sticker and the notices arriving through the worker, tenant isolation, SUPER_ADMIN suspending and reactivating).
+- **Closed the sprints and the board of corte 2**: `15-project-control/sprint-status.md` with Sprints 2–6 and the release 2.0.0 closure, and `ceremonies.md` with the planning, daily sync, review and retro of each sprint, reconstructed from the dated work-split handoffs (DOCS [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112), awaiting approval); checked each open story against `v2.0.0` and closed with evidence the seven that work (#21, #23, #24, #25, #67, #68, #76), three resolved items (#51, #60, #88) and the release issue #109 — the board is 36 Done, 2 Backlog, with HU-NOTIF-003 (#22) carried over because `AppointmentMarkedNoShow` has no consumer yet.
 - **Secret audit before the repositories went public**: full-history scan of 32 repositories; found and had revoked the Gmail app password in the prototype's history; published `infra-postgres` and `infra-mongo` only after verifying nothing sensitive is versioned.
 
 ## 3. Blockers and risks
@@ -79,8 +80,8 @@
 - MongoDB: https://github.com/code-corhuila/barber-saas-infra-mongo/pulls?q=is%3Amerged
 - Shell and Android app: https://github.com/code-corhuila/barber-saas-front/pulls?q=is%3Amerged
 - **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
-  - Pull requests: **157** (155 merged, 2 closed without merge).
-  - `barber-saas-docs` (19):
+  - Pull requests: **158** (155 merged, 2 closed without merge, 1 open awaiting the teacher's approval).
+  - `barber-saas-docs` (20):
     - [#73](https://github.com/code-corhuila/barber-saas-docs/pull/73) docs(architecture): accept adr-009, saga state in a workflow schema — merged 2026-10-05
     - [#74](https://github.com/code-corhuila/barber-saas-docs/pull/74) docs(api): add the onboarding operations for owners and barbers — merged 2026-10-05
     - [#75](https://github.com/code-corhuila/barber-saas-docs/pull/75) docs(api): specify the owner-onboarding saga and close oq-12 — merged 2026-10-05
@@ -100,6 +101,7 @@
     - [#107](https://github.com/code-corhuila/barber-saas-docs/pull/107) docs(notifications): the password-reset e-mail is implemented — merged 2026-10-08
     - [#108](https://github.com/code-corhuila/barber-saas-docs/pull/108) docs(appointment,loyalty): apply the reward coupon at booking — merged 2026-10-08
     - [#110](https://github.com/code-corhuila/barber-saas-docs/pull/110) docs(architecture): register the appointment-loyalty cycle as technical debt — merged 2026-10-09
+    - [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112) docs(project-control): close the corte 2 sprints and record their ceremonies — open, awaiting the teacher's approval (opened 2026-10-09)
   - `barber-saas-api-gateway` (7):
     - [#7](https://github.com/code-corhuila/barber-saas-api-gateway/pull/7) feat(routes): route the workflow's saga operations — merged 2026-10-05
     - [#8](https://github.com/code-corhuila/barber-saas-api-gateway/pull/8) chore: Barber Saas header and the barber-saas-infra-postgres name — merged 2026-10-06
@@ -256,7 +258,7 @@
     - [#15](https://github.com/code-corhuila/barber-saas-workflow/pull/15) chore(release): promote MVP 2 to qa with cherry-pick -x — merged 2026-10-08
     - [#16](https://github.com/code-corhuila/barber-saas-workflow/pull/16) chore(release): fill release 2.0.0 from qa with cherry-pick -x — merged 2026-10-08
     - [#17](https://github.com/code-corhuila/barber-saas-workflow/pull/17) release: 2.0.0 — MVP 2 (corte 2) — merged 2026-10-09
-  - Commits: **243** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+  - Commits: **245** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
     - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (8):
       - [`d9e977a`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/d9e977aa290749bbc83349717c5a4fd9518b52a1) docs(week-09): add owner onboarding and barber accounts — 2026-10-05
       - [`3bbac33`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/3bbac33d856f1af26c2deb0aef33dd4141ce0731) docs(week-10): the automatic sticker and the loyalty tab are in — 2026-10-07
@@ -284,7 +286,7 @@
       - [`f5e8930`](https://github.com/code-corhuila/barber-saas-appointment-db/commit/f5e89306141e2f3bb2a5f1d171990b75bf2fe6a6) feat(ddl): an appointment paid by a reward coupon costs 0 — 2026-10-08
       - [`46ef87b`](https://github.com/code-corhuila/barber-saas-appointment-db/commit/46ef87b061ed35d74442cd0f4c7492982604384d) feat(ddl): keep a reward coupon on one appointment — 2026-10-08
       - [`5e1e99c`](https://github.com/code-corhuila/barber-saas-appointment-db/commit/5e1e99c01baa1b315b22424f7f8f881caa71b7a8) feat(ddl): add coupon_id to appointment — 2026-10-08
-    - `barber-saas-docs` (47):
+    - `barber-saas-docs` (49):
       - [`ac7b751`](https://github.com/code-corhuila/barber-saas-docs/commit/ac7b7518d36d90dfc7000827267e41e259d55fdd) docs(api): close oq-08 and oq-09 and point their references — 2026-10-05
       - [`8f057b8`](https://github.com/code-corhuila/barber-saas-docs/commit/8f057b85fa5fe31fb18598d4371955a4561afac7) docs(api): specify the internal user read and busy slots — 2026-10-05
       - [`e967d44`](https://github.com/code-corhuila/barber-saas-docs/commit/e967d4486ff569e13900d20aaf623dc1ba867542) docs(architecture): add adr-015, busy slots read internally — 2026-10-05
@@ -332,6 +334,8 @@
       - [`6d3ad83`](https://github.com/code-corhuila/barber-saas-docs/commit/6d3ad839c93ae4af59cc3b14f6f4c7bd335bf5de) docs(requirements): trace FR-003 to the password-reset e-mail — 2026-10-08
       - [`4de8680`](https://github.com/code-corhuila/barber-saas-docs/commit/4de8680fa96831ee151fe37438d91e58a8e4ae72) docs(microservices): the password-reset e-mail is implemented — 2026-10-08
       - [`d746bfc`](https://github.com/code-corhuila/barber-saas-docs/commit/d746bfc4c7874919f0ebef1db3ea7b36e16df2f9) docs(notifications): contract the 503 and the processed_event of the reset e-mail — 2026-10-08
+      - [`033bf9d`](https://github.com/code-corhuila/barber-saas-docs/commit/033bf9dfed55fddf163bb9538423795690897b22) docs(project-control): record the ceremonies of the corte 2 sprints — 2026-10-09
+      - [`760a5a9`](https://github.com/code-corhuila/barber-saas-docs/commit/760a5a9579ced27bb41a056f1b2d9f5865892a0c) docs(project-control): close the sprints of corte 2 with release 2.0.0 — 2026-10-09
     - `barber-saas-front` (29):
       - [`1e4b133`](https://github.com/code-corhuila/barber-saas-front/commit/1e4b133899e899150ab6dc0894b9a2619024a902) fix(native): give the packaged domain apps root-relative addresses — 2026-10-05
       - [`fddaa8b`](https://github.com/code-corhuila/barber-saas-front/commit/fddaa8bb099a95e972d5a64c3f865bd9decc1552) docs(readme): explain how to package and run the Android app — 2026-10-05
@@ -523,8 +527,13 @@
   - Issues opened: **2**:
     - [barber-saas-docs#111](https://github.com/code-corhuila/barber-saas-docs/issues/111) MVP 3 backlog: findings of the review on the release 2.0.0 pull requests — 2026-10-08 (open)
     - [barber-saas-docs#109](https://github.com/code-corhuila/barber-saas-docs/issues/109) Release 2.0.0 (MVP 2): promote develop → qa → main and tag v2.0.0 — 2026-10-08 (open)
-  - Comments on pull requests and issues: **44** (answers to the automated review, tracking and backlog notes):
+  - Comments on pull requests and issues: **56** (answers to the automated review, tracking and backlog notes):
     - [barber-saas-worker#3](https://github.com/code-corhuila/barber-saas-worker/pull/3#issuecomment-6025233726) — 2026-10-06
+    - [barber-saas-docs#107](https://github.com/code-corhuila/barber-saas-docs/pull/107#issuecomment-6069732272) — 2026-10-08
+    - [barber-saas-docs#108](https://github.com/code-corhuila/barber-saas-docs/pull/108#issuecomment-6069732652) — 2026-10-08
+    - [barber-saas-docs#108](https://github.com/code-corhuila/barber-saas-docs/pull/108#issuecomment-6070619228) — 2026-10-08
+    - [barber-saas-docs#110](https://github.com/code-corhuila/barber-saas-docs/pull/110#issuecomment-6073203292) — 2026-10-08
+    - [barber-saas-docs#111](https://github.com/code-corhuila/barber-saas-docs/issues/111#issuecomment-6073681560) — 2026-10-08
     - [barber-saas-notifications-db#4](https://github.com/code-corhuila/barber-saas-notifications-db/pull/4#issuecomment-6069729965) — 2026-10-08
     - [barber-saas-finance-inventory-db#8](https://github.com/code-corhuila/barber-saas-finance-inventory-db/pull/8#issuecomment-6073683990) — 2026-10-08
     - [barber-saas-finance-inventory-app#11](https://github.com/code-corhuila/barber-saas-finance-inventory-app/pull/11#issuecomment-6073683708) — 2026-10-08
@@ -538,11 +547,6 @@
     - [barber-saas-appointment-app#16](https://github.com/code-corhuila/barber-saas-appointment-app/pull/16#issuecomment-6073682122) — 2026-10-08
     - [barber-saas-appointment-api#19](https://github.com/code-corhuila/barber-saas-appointment-api/pull/19#issuecomment-6069730700) — 2026-10-08
     - [barber-saas-appointment-api#23](https://github.com/code-corhuila/barber-saas-appointment-api/pull/23#issuecomment-6073681830) — 2026-10-08
-    - [barber-saas-docs#107](https://github.com/code-corhuila/barber-saas-docs/pull/107#issuecomment-6069732272) — 2026-10-08
-    - [barber-saas-docs#108](https://github.com/code-corhuila/barber-saas-docs/pull/108#issuecomment-6069732652) — 2026-10-08
-    - [barber-saas-docs#108](https://github.com/code-corhuila/barber-saas-docs/pull/108#issuecomment-6070619228) — 2026-10-08
-    - [barber-saas-docs#110](https://github.com/code-corhuila/barber-saas-docs/pull/110#issuecomment-6073203292) — 2026-10-08
-    - [barber-saas-docs#111](https://github.com/code-corhuila/barber-saas-docs/issues/111#issuecomment-6073681560) — 2026-10-08
     - [barber-saas-workflow#17](https://github.com/code-corhuila/barber-saas-workflow/pull/17#issuecomment-6073203027) — 2026-10-08
     - [barber-saas-worker#10](https://github.com/code-corhuila/barber-saas-worker/pull/10#issuecomment-6069731498) — 2026-10-08
     - [barber-saas-worker#14](https://github.com/code-corhuila/barber-saas-worker/pull/14#issuecomment-6073202719) — 2026-10-08
@@ -558,6 +562,19 @@
     - [barber-saas-infra-postgres#28](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/28#issuecomment-6069731927) — 2026-10-08
     - [barber-saas-infra-postgres#28](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/28#issuecomment-6069746860) — 2026-10-08
     - [barber-saas-infra-postgres#33](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/33#issuecomment-6073199329) — 2026-10-08
+    - [barber-saas-docs#111](https://github.com/code-corhuila/barber-saas-docs/issues/111#issuecomment-6082276761) — 2026-10-09
+    - [barber-saas-docs#21](https://github.com/code-corhuila/barber-saas-docs/issues/21#issuecomment-6082654882) — 2026-10-09
+    - [barber-saas-docs#23](https://github.com/code-corhuila/barber-saas-docs/issues/23#issuecomment-6082655989) — 2026-10-09
+    - [barber-saas-docs#24](https://github.com/code-corhuila/barber-saas-docs/issues/24#issuecomment-6082657270) — 2026-10-09
+    - [barber-saas-docs#25](https://github.com/code-corhuila/barber-saas-docs/issues/25#issuecomment-6082658356) — 2026-10-09
+    - [barber-saas-docs#67](https://github.com/code-corhuila/barber-saas-docs/issues/67#issuecomment-6082659620) — 2026-10-09
+    - [barber-saas-docs#68](https://github.com/code-corhuila/barber-saas-docs/issues/68#issuecomment-6082660677) — 2026-10-09
+    - [barber-saas-docs#76](https://github.com/code-corhuila/barber-saas-docs/issues/76#issuecomment-6082661681) — 2026-10-09
+    - [barber-saas-docs#51](https://github.com/code-corhuila/barber-saas-docs/issues/51#issuecomment-6082663040) — 2026-10-09
+    - [barber-saas-docs#60](https://github.com/code-corhuila/barber-saas-docs/issues/60#issuecomment-6082664455) — 2026-10-09
+    - [barber-saas-docs#88](https://github.com/code-corhuila/barber-saas-docs/issues/88#issuecomment-6082665652) — 2026-10-09
+    - [barber-saas-docs#109](https://github.com/code-corhuila/barber-saas-docs/issues/109#issuecomment-6082666830) — 2026-10-09
+    - [barber-saas-docs#22](https://github.com/code-corhuila/barber-saas-docs/issues/22#issuecomment-6082669511) — 2026-10-09
     - [barber-saas-notifications-db#8](https://github.com/code-corhuila/barber-saas-notifications-db/pull/8#issuecomment-6082276314) — 2026-10-09
     - [barber-saas-notifications-app#9](https://github.com/code-corhuila/barber-saas-notifications-app/pull/9#issuecomment-6082275937) — 2026-10-09
     - [barber-saas-notifications-api#15](https://github.com/code-corhuila/barber-saas-notifications-api/pull/15#issuecomment-6082275516) — 2026-10-09
@@ -567,7 +584,6 @@
     - [barber-saas-barbershop-db#11](https://github.com/code-corhuila/barber-saas-barbershop-db/pull/11#issuecomment-6082273984) — 2026-10-09
     - [barber-saas-barbershop-app#18](https://github.com/code-corhuila/barber-saas-barbershop-app/pull/18#issuecomment-6082273558) — 2026-10-09
     - [barber-saas-barbershop-api#24](https://github.com/code-corhuila/barber-saas-barbershop-api/pull/24#issuecomment-6082273121) — 2026-10-09
-    - [barber-saas-docs#111](https://github.com/code-corhuila/barber-saas-docs/issues/111#issuecomment-6082276761) — 2026-10-09
   - Tags and releases: **31** (annotated tag on `main` + GitHub Release):
     - [barber-saas-api-gateway `v2.0.0`](https://github.com/code-corhuila/barber-saas-api-gateway/releases/tag/v2.0.0) — 2026-10-08
     - [barber-saas-appointment-api `v2.0.0`](https://github.com/code-corhuila/barber-saas-appointment-api/releases/tag/v2.0.0) — 2026-10-08
