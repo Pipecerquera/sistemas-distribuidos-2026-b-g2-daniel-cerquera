@@ -63,12 +63,23 @@
 - DOCS (`barber-saas-docs`), uncommitted working-tree evidence for SPEC-002 (verified via `git status` / `git diff --stat` on 2026-09-03 and again this week — still pending commit): `05-architecture/decisions/records/ADR-003-academic-microservice-extraction.md`, `09-microservices/service-catalog.md`, `09-microservices/services/notification/`, deletion of `09-microservices/services/01-api-gateway/`
 - CODE (`barber-saas`): https://github.com/code-corhuila/barber-saas/commit/d85979a (2026-09-03, README rewrite) was the last commit when this report was first written; [`122b362`](https://github.com/code-corhuila/barber-saas/commit/122b362) landed on 2026-09-13 (see the complete record below and Week 07)
 - Pending items honestly tracked in "Blockers and risks" above
-- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+- **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
   - Pull requests: **0** (0 merged).
-  - Direct commits without a pull request (**3**, before the PR flow was mandatory):
-    - [`2f5afed`](https://github.com/code-corhuila/barber-saas-docs/commit/2f5afed) `barber-saas-docs` — docs(domain): apply the content updates missing from the previous commit (2026-09-13)
-    - [`003fb45`](https://github.com/code-corhuila/barber-saas-docs/commit/003fb45) `barber-saas-docs` — docs(domain): reconcile domain events with the loyalty/notification wiring (2026-09-13)
-    - [`122b362`](https://github.com/code-corhuila/barber-saas/commit/122b362) `barber-saas` — feat(loyalty): auto-grant sticker on appointment completion and notify on loyalty events (2026-09-13)
+  - Commits: **7** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+    - `Pipecerquera` (3):
+      - [`3a7e4e1`](https://github.com/Pipecerquera/Pipecerquera/commit/3a7e4e12d8633c4f4c6d80dc51dcceddc327d274) Restore name heading in README — 2026-09-10
+      - [`6bb0636`](https://github.com/Pipecerquera/Pipecerquera/commit/6bb06369a236df7ade4574af5c5bf91686d0c7ab) Add profile CONFIG block to README — 2026-09-10
+      - [`17b0be3`](https://github.com/Pipecerquera/Pipecerquera/commit/17b0be3b83ff4fbc55ba87dd0d846b17d5ace60b) delete lavadero_movil because its a error — 2026-09-10
+    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (1):
+      - [`4144260`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/4144260da7a2b61c2504f74b14c1cc5ad094f54f) docs(hu-status): complete week 06 delivery — 2026-09-13
+    - `barber-saas` (1):
+      - [`122b362`](https://github.com/code-corhuila/barber-saas/commit/122b362386811e084fda17df7b56479c18da488c) feat(loyalty): auto-grant sticker on appointment completion and notify on loyalty events — 2026-09-13
+    - `barber-saas-docs` (2):
+      - [`2f5afed`](https://github.com/code-corhuila/barber-saas-docs/commit/2f5afeda4ee276d1fe027e73120f2d089d85fe2a) docs(domain): apply the content updates missing from the previous commit — 2026-09-13
+      - [`003fb45`](https://github.com/code-corhuila/barber-saas-docs/commit/003fb4509558ddfbe12bb1a7b9999a507611c9a5) docs(domain): reconcile domain events with the loyalty/notification wiring — 2026-09-13
+  - Issues opened: **0**.
+  - Comments on pull requests and issues: **0**.
+  - Tags and releases: **0**.
 - *End of the complete record.*
 
 ![Resumen Semana 6](Week-06.jpg)
