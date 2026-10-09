@@ -63,18 +63,26 @@
 - DOCS, SPEC-004 (pushed, pending PR/merge): https://github.com/code-corhuila/barber-saas-docs/commit/34981fa on branch https://github.com/code-corhuila/barber-saas-docs/tree/docs/004-align-api-contracts
 - DOCS, instructor's new CODEOWNERS gate on `main`: https://github.com/code-corhuila/barber-saas-docs/commit/19bd6ce
 - Pending items honestly tracked in "Blockers and risks" above
-- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+- **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
   - Pull requests: **1** (0 merged, 1 closed without merge).
   - `barber-saas-docs` (1):
     - [#19](https://github.com/code-corhuila/barber-saas-docs/pull/19) docs(architecture): ADR-004 supersedes ADR-002/003 — full microservice decomposition — closed without merge 2026-09-21
-  - Direct commits without a pull request (**7**, before the PR flow was mandatory):
-    - [`494c563`](https://github.com/code-corhuila/barber-saas-docs/commit/494c563) `barber-saas-docs` — docs(architecture): supersede ADR-002/003 with ADR-004 full microservice decomposition (2026-09-20)
-    - [`34981fa`](https://github.com/code-corhuila/barber-saas-docs/commit/34981fa) `barber-saas-docs` — docs(api): apply SPEC-004 — align API contracts with real auth (HS512/24h) and roles (2026-09-17)
-    - [`1cf7851`](https://github.com/code-corhuila/barber-saas-docs/commit/1cf7851) `barber-saas-docs` — docs(governance): document DOCS branch-strategy exception and align CLAUDE.md (2026-09-14)
-    - [`9632692`](https://github.com/code-corhuila/barber-saas-docs/commit/9632692) `barber-saas-docs` — docs(microservices): apply SPEC-002 — real service catalog, ADR-003, drop fictional api-gateway (2026-09-14)
-    - [`33f51ad`](https://github.com/code-corhuila/barber-saas-docs/commit/33f51ad) `barber-saas-docs` — chore: remove test-branch workflow demo file (2026-09-14)
-    - [`7677549`](https://github.com/code-corhuila/barber-saas-docs/commit/7677549) `barber-saas-docs` — chore: add test file to validate test-branch -> main workflow (2026-09-14)
-    - [`72c622f`](https://github.com/code-corhuila/barber-saas/commit/72c622f) `barber-saas` — fix(config): stop hardcoding mail credentials, source them from env (2026-09-17)
+  - Commits: **9** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (2):
+      - [`ab11102`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/ab1110254d6ea23762bf78ff86b7fb5a205473c7) docs(hu-status): complete week 07 delivery — 2026-09-17
+      - [`99d6078`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/99d60788b179ac001c54a1bf2a3880b05004bbc9) docs(week-07): add evidence photo to hu-status delivery — 2026-09-20
+    - `barber-saas` (1):
+      - [`72c622f`](https://github.com/code-corhuila/barber-saas/commit/72c622fc88d8c4a3eeed310b8f002438be6681ab) fix(config): stop hardcoding mail credentials, source them from env — 2026-09-17
+    - `barber-saas-docs` (6):
+      - [`1cf7851`](https://github.com/code-corhuila/barber-saas-docs/commit/1cf7851cdaf9da142acb1f9fdba3ce8419aff7bd) docs(governance): document DOCS branch-strategy exception and align CLAUDE.md — 2026-09-14
+      - [`9632692`](https://github.com/code-corhuila/barber-saas-docs/commit/963269222310bd8d32ddce53819fa6b8af1d1cb7) docs(microservices): apply SPEC-002 — real service catalog, ADR-003, drop fictional api-gateway — 2026-09-14
+      - [`33f51ad`](https://github.com/code-corhuila/barber-saas-docs/commit/33f51ad3c0f9c7b0d0b40d2466ea4aa44593edcd) chore: remove test-branch workflow demo file — 2026-09-14
+      - [`7677549`](https://github.com/code-corhuila/barber-saas-docs/commit/7677549302fb65c8cdbf37c4069687e652591f1d) chore: add test file to validate test-branch -> main workflow — 2026-09-14
+      - [`34981fa`](https://github.com/code-corhuila/barber-saas-docs/commit/34981fa73f9eb2a6a1aba48446e53b66e9cfa842) docs(api): apply SPEC-004 — align API contracts with real auth (HS512/24h) and roles — 2026-09-17
+      - [`494c563`](https://github.com/code-corhuila/barber-saas-docs/commit/494c563da0188441e16fc63154d920d24a000725) docs(architecture): supersede ADR-002/003 with ADR-004 full microservice decomposition — 2026-09-20
+  - Issues opened: **0**.
+  - Comments on pull requests and issues: **0**.
+  - Tags and releases: **0**.
 - *End of the complete record.*
 
 ![Resumen Semana 7](Week-07.png)
