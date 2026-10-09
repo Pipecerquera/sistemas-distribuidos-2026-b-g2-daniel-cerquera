@@ -71,16 +71,34 @@
 - DOCS, teammate PRs open this week (evidence the team isn't single-author anymore): [`#15`](https://github.com/code-corhuila/barber-saas-docs/pull/15) (carloslealm), [`#17`](https://github.com/code-corhuila/barber-saas-docs/pull/17) (JUANDAX233), [`#18`](https://github.com/code-corhuila/barber-saas-docs/pull/18) (Carolay Arraut Heredia)
 - DOCS, product backlog gap (evidence Session 08 stories don't exist yet): `03-product/product-backlog.md`
 - Pending items honestly tracked in "Blockers and risks" above
-- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+- **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
   - Pull requests: **1** (1 merged).
   - `barber-saas-docs` (1):
     - [#16](https://github.com/code-corhuila/barber-saas-docs/pull/16) docs(api): apply SPEC-004 + SPEC-008 — align API contracts with real auth and declare open questions — merged 2026-09-24
-  - Direct commits without a pull request (**5**, before the PR flow was mandatory):
-    - [`fead52a`](https://github.com/code-corhuila/barber-saas-docs/commit/fead52a) `barber-saas-docs` — docs(api): apply SPEC-004 + SPEC-008 — align API contracts with real auth and declare open questions (#16) (2026-09-24)
-    - [`eceee3f`](https://github.com/code-corhuila/barber-saas-docs/commit/eceee3f) `barber-saas-docs` — docs(api): translate auth-service.yaml to English, trim pedagogical note (2026-09-24)
-    - [`9baf72c`](https://github.com/code-corhuila/barber-saas-docs/commit/9baf72c) `barber-saas-docs` — fix(api): correct notification-service.yaml planned server URLs (2026-09-24)
-    - [`3034740`](https://github.com/code-corhuila/barber-saas-docs/commit/3034740) `barber-saas-docs` — docs(api): address reviewer recommendations on api-gateway removal and notification naming (2026-09-24)
-    - [`47bbe9b`](https://github.com/code-corhuila/barber-saas-docs/commit/47bbe9b) `barber-saas-docs` — docs(api): declare open questions with owner and closing criterion (2026-09-24)
+  - Commits: **9** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (4):
+      - [`9ed3b41`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/9ed3b414b990192716e1c3d1d5d5c1d7d37b19f8) docs(hu-status): complete week 08 delivery — 2026-09-21
+      - [`4548d29`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/4548d29440377ede52c3bfe4c5cc0802afa29bc9) docs(week-08): close HU-000-016 — DOCS PR #16 merged to main — 2026-09-24
+      - [`352f1f0`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/352f1f060067ab4f96de9381b07e08d8986adaaa) docs(week-08): record second review round and bug fix on HU-000-016 — 2026-09-24
+      - [`689144b`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/689144b890c07665763f8dd27b6b089f5ad744e4) docs(week-08): record today's individual DOCS contribution on HU-000-016 — 2026-09-24
+    - `barber-saas-docs` (5):
+      - [`fead52a`](https://github.com/code-corhuila/barber-saas-docs/commit/fead52a6a31673e6014705e78953892647780435) docs(api): apply SPEC-004 + SPEC-008 — align API contracts with real auth and declare open questions (#16) — 2026-09-24
+      - [`eceee3f`](https://github.com/code-corhuila/barber-saas-docs/commit/eceee3fab872c150658278cc7963258b6e8dd3bc) docs(api): translate auth-service.yaml to English, trim pedagogical note — 2026-09-24
+      - [`9baf72c`](https://github.com/code-corhuila/barber-saas-docs/commit/9baf72c9f2cf2bd73c5491464e8261fe22e290d8) fix(api): correct notification-service.yaml planned server URLs — 2026-09-24
+      - [`3034740`](https://github.com/code-corhuila/barber-saas-docs/commit/3034740005ffaf674cece78ead6fe090438c538c) docs(api): address reviewer recommendations on api-gateway removal and notification naming — 2026-09-24
+      - [`47bbe9b`](https://github.com/code-corhuila/barber-saas-docs/commit/47bbe9b1041dd0aa6ed7e1e483fd020c14a0402e) docs(api): declare open questions with owner and closing criterion — 2026-09-24
+  - Issues opened: **5**:
+    - [barber-saas-docs#25](https://github.com/code-corhuila/barber-saas-docs/issues/25) HU-APPT-003 — Track walk-in appointments (no prior booking) — 2026-09-21 (open)
+    - [barber-saas-docs#24](https://github.com/code-corhuila/barber-saas-docs/issues/24) HU-SADMIN-002 — Auto-transition a barbershop from TRIAL to SUSPENDED on trial expiration — 2026-09-21 (open)
+    - [barber-saas-docs#23](https://github.com/code-corhuila/barber-saas-docs/issues/23) HU-NOTIF-004 — Notify client on loyalty sticker grant and reward redemption — 2026-09-21 (open)
+    - [barber-saas-docs#22](https://github.com/code-corhuila/barber-saas-docs/issues/22) HU-NOTIF-003 — Notify client when appointment is auto-marked NO_SHOW — 2026-09-21 (open)
+    - [barber-saas-docs#21](https://github.com/code-corhuila/barber-saas-docs/issues/21) HU-NOTIF-002 — Notify client when appointment is marked COMPLETED — 2026-09-21 (open)
+  - Comments on pull requests and issues: **4** (answers to the automated review, tracking and backlog notes):
+    - [barber-saas-docs#16](https://github.com/code-corhuila/barber-saas-docs/pull/16#issuecomment-5814896761) — 2026-09-24
+    - [barber-saas-docs#16](https://github.com/code-corhuila/barber-saas-docs/pull/16#issuecomment-5815005803) — 2026-09-24
+    - [barber-saas-docs#16](https://github.com/code-corhuila/barber-saas-docs/pull/16#issuecomment-5815345937) — 2026-09-24
+    - [barber-saas-docs#16](https://github.com/code-corhuila/barber-saas-docs/pull/16#issuecomment-5816054888) — 2026-09-24
+  - Tags and releases: **0**.
 - *End of the complete record.*
 
 ![Resumen Semana 8](week-08.jpg)
