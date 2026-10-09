@@ -47,7 +47,7 @@
 - **Answered every recommendation of the automated review** on my pull requests, in writing: applied the valid ones as new commits (e.g. a TTL and an `eventType` enum for `processed_event`, rollback order in appointment-db), and justified the rest; code findings of the release went to the MVP 3 backlog (DOCS #111).
 - **Released MVP 2 in my 12 repositories**: CI rules the teacher set, a generated `CHANGELOG.md`, and the promotion `develop` → `qa` → `release.2.0.0` → `main` with `cherry-pick -x` (340 commits), checking each time that no commit lacks its trail, that every cited SHA exists in its source branch (norm 10.5) and that the tree is identical; then tagged `v2.0.0` with a GitHub Release. Wrote the step-by-step prompts so Carlos and Juan Pablo release their 18 repositories the same way, after a local dry run showed none of them conflicts.
 - **Closed the team's release** (2026-10-08/09): merged, verified and tagged Juan Pablo's 9 repositories with his agreement; for Carlos's 9, once the teacher approved and Carlos merged them, checked that each `main` tree equals `release.2.0.0`, then created the annotated `v2.0.0` tag and the GitHub Release (notes from each `CHANGELOG.md`). Answered the 48 findings of the automated review on his 9 pull requests — first checking in the code the ones the bot could not confirm (the idempotency key reaches the request, only the worker may post events, the device token and its key share one MongoDB transaction) — and recorded the real defects, including a critical one in barbershop-app (an account left without a profile if the second step fails), as MVP 3 backlog in DOCS #111. Built the single delivery zip of the 31 `v2.0.0` source archives, and checked that it runs as delivered: unpacked with the repositories' full names in an empty folder, `./scripts/up.sh dev` brought the 13 containers up healthy on a new volume in 2 min 36 s, and the four-role check passed 31 of 31 (saga with the chosen plan, booking without double booking, the sticker and the notices arriving through the worker, tenant isolation, SUPER_ADMIN suspending and reactivating).
-- **Closed the sprints and the board of corte 2**: `15-project-control/sprint-status.md` with Sprints 2–6 and the release 2.0.0 closure, and `ceremonies.md` with the planning, daily sync, review and retro of each sprint, reconstructed from the dated work-split handoffs (DOCS [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112), awaiting approval); checked each open story against `v2.0.0` and closed with evidence the seven that work (#21, #23, #24, #25, #67, #68, #76), three resolved items (#51, #60, #88) and the release issue #109 — the board is 36 Done, 2 Backlog, with HU-NOTIF-003 (#22) carried over because `AppointmentMarkedNoShow` has no consumer yet.
+- **Closed the sprints and the board of corte 2**: `15-project-control/sprint-status.md` with Sprints 2–6 and the release 2.0.0 closure, and `ceremonies.md` with the planning, daily sync, review and retro of each sprint, reconstructed from the dated work-split handoffs (DOCS [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112), approved by the teacher and merged); checked each open story against `v2.0.0` and closed with evidence the seven that work (#21, #23, #24, #25, #67, #68, #76), three resolved items (#51, #60, #88) and the release issue #109 — the board is 36 Done, 2 Backlog, with HU-NOTIF-003 (#22) carried over because `AppointmentMarkedNoShow` has no consumer yet.
 - **Secret audit before the repositories went public**: full-history scan of 32 repositories; found and had revoked the Gmail app password in the prototype's history; published `infra-postgres` and `infra-mongo` only after verifying nothing sensitive is versioned.
 
 ## 3. Blockers and risks
@@ -74,13 +74,14 @@
 - This week's infographic: `10-week/hu-status/Week-10.jpg` (in this same folder)
 - DOCS, events (ADR-016 and contracts): https://github.com/code-corhuila/barber-saas-docs/pull/82 … https://github.com/code-corhuila/barber-saas-docs/pull/87
 - DOCS, plan at sign-up: https://github.com/code-corhuila/barber-saas-docs/pull/89
-- DOCS, awaiting approval: https://github.com/code-corhuila/barber-saas-docs/pull/90 · https://github.com/code-corhuila/barber-saas-docs/pull/92 · https://github.com/code-corhuila/barber-saas-docs/pull/93
+- DOCS, the system as it runs (merged): https://github.com/code-corhuila/barber-saas-docs/pull/90 · https://github.com/code-corhuila/barber-saas-docs/pull/92 · https://github.com/code-corhuila/barber-saas-docs/pull/93
+- DOCS, sprints and ceremonies of corte 2 (merged): https://github.com/code-corhuila/barber-saas-docs/pull/112
 - Worker: https://github.com/code-corhuila/barber-saas-worker/pulls?q=is%3Amerged
 - Platform admin: https://github.com/code-corhuila/barber-saas-platform-admin-api/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-platform-admin-app/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-platform-admin-db/pulls?q=is%3Amerged
 - MongoDB: https://github.com/code-corhuila/barber-saas-infra-mongo/pulls?q=is%3Amerged
 - Shell and Android app: https://github.com/code-corhuila/barber-saas-front/pulls?q=is%3Amerged
 - **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
-  - Pull requests: **158** (155 merged, 2 closed without merge, 1 open awaiting the teacher's approval).
+  - Pull requests: **158** (156 merged, 2 closed without merge).
   - `barber-saas-docs` (20):
     - [#73](https://github.com/code-corhuila/barber-saas-docs/pull/73) docs(architecture): accept adr-009, saga state in a workflow schema — merged 2026-10-05
     - [#74](https://github.com/code-corhuila/barber-saas-docs/pull/74) docs(api): add the onboarding operations for owners and barbers — merged 2026-10-05
@@ -101,7 +102,7 @@
     - [#107](https://github.com/code-corhuila/barber-saas-docs/pull/107) docs(notifications): the password-reset e-mail is implemented — merged 2026-10-08
     - [#108](https://github.com/code-corhuila/barber-saas-docs/pull/108) docs(appointment,loyalty): apply the reward coupon at booking — merged 2026-10-08
     - [#110](https://github.com/code-corhuila/barber-saas-docs/pull/110) docs(architecture): register the appointment-loyalty cycle as technical debt — merged 2026-10-09
-    - [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112) docs(project-control): close the corte 2 sprints and record their ceremonies — open, awaiting the teacher's approval (opened 2026-10-09)
+    - [#112](https://github.com/code-corhuila/barber-saas-docs/pull/112) docs(project-control): close the corte 2 sprints and record their ceremonies — merged 2026-10-09
   - `barber-saas-api-gateway` (7):
     - [#7](https://github.com/code-corhuila/barber-saas-api-gateway/pull/7) feat(routes): route the workflow's saga operations — merged 2026-10-05
     - [#8](https://github.com/code-corhuila/barber-saas-api-gateway/pull/8) chore: Barber Saas header and the barber-saas-infra-postgres name — merged 2026-10-06
@@ -334,8 +335,8 @@
       - [`6d3ad83`](https://github.com/code-corhuila/barber-saas-docs/commit/6d3ad839c93ae4af59cc3b14f6f4c7bd335bf5de) docs(requirements): trace FR-003 to the password-reset e-mail — 2026-10-08
       - [`4de8680`](https://github.com/code-corhuila/barber-saas-docs/commit/4de8680fa96831ee151fe37438d91e58a8e4ae72) docs(microservices): the password-reset e-mail is implemented — 2026-10-08
       - [`d746bfc`](https://github.com/code-corhuila/barber-saas-docs/commit/d746bfc4c7874919f0ebef1db3ea7b36e16df2f9) docs(notifications): contract the 503 and the processed_event of the reset e-mail — 2026-10-08
-      - [`033bf9d`](https://github.com/code-corhuila/barber-saas-docs/commit/033bf9dfed55fddf163bb9538423795690897b22) docs(project-control): record the ceremonies of the corte 2 sprints — 2026-10-09
-      - [`760a5a9`](https://github.com/code-corhuila/barber-saas-docs/commit/760a5a9579ced27bb41a056f1b2d9f5865892a0c) docs(project-control): close the sprints of corte 2 with release 2.0.0 — 2026-10-09
+      - [`a7fd031`](https://github.com/code-corhuila/barber-saas-docs/commit/a7fd031ea2f23deff2ed84190f3d35ea3094a250) docs(project-control): record the ceremonies of the corte 2 sprints — 2026-10-09
+      - [`a459cb0`](https://github.com/code-corhuila/barber-saas-docs/commit/a459cb0adf1262dad0edc54481c2251a9424705c) docs(project-control): close the sprints of corte 2 with release 2.0.0 — 2026-10-09
     - `barber-saas-front` (29):
       - [`1e4b133`](https://github.com/code-corhuila/barber-saas-front/commit/1e4b133899e899150ab6dc0894b9a2619024a902) fix(native): give the packaged domain apps root-relative addresses — 2026-10-05
       - [`fddaa8b`](https://github.com/code-corhuila/barber-saas-front/commit/fddaa8bb099a95e972d5a64c3f865bd9decc1552) docs(readme): explain how to package and run the Android app — 2026-10-05
