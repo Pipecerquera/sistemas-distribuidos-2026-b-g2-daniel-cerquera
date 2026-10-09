@@ -92,5 +92,68 @@
 - Polyrepo, my phase 1 (pull requests merged to `develop`): https://github.com/code-corhuila/barber-saas-infra/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-db/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-api/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-api-gateway/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-front/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-app/pulls?q=is%3Amerged
 - CODE, hardcoded secrets still on `develop`: `barbersaas-backend/barbersaas-backend/docker-compose.yml` (lines 8 and 45) at https://github.com/code-corhuila/barber-saas/tree/develop
 - CODE, last config fix (mail credentials): https://github.com/code-corhuila/barber-saas/commit/72c622f
+- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+  - Pull requests: **53** (53 merged).
+  - `barber-saas-docs` (24):
+    - [#20](https://github.com/code-corhuila/barber-saas-docs/pull/20) docs(architecture): ADR-004 supersedes ADR-002/003 — full microservice decomposition — merged 2026-09-28
+    - [#28](https://github.com/code-corhuila/barber-saas-docs/pull/28) docs(governance): align git conventions with course branching policy — merged 2026-09-28
+    - [#30](https://github.com/code-corhuila/barber-saas-docs/pull/30) docs(governance): align governance rules with the course norm and framework pillars — merged 2026-09-28
+    - [#32](https://github.com/code-corhuila/barber-saas-docs/pull/32) docs(architecture): record the ADRs required by the course norm — merged 2026-09-28
+    - [#36](https://github.com/code-corhuila/barber-saas-docs/pull/36) docs(architecture): rewrite overview for the adr-004 microservice topology — merged 2026-09-29
+    - [#37](https://github.com/code-corhuila/barber-saas-docs/pull/37) docs(architecture): add deployment view for the polyrepo platform — merged 2026-09-29
+    - [#38](https://github.com/code-corhuila/barber-saas-docs/pull/38) docs(data): model one database per domain with uuid ids and cents — merged 2026-09-29
+    - [#39](https://github.com/code-corhuila/barber-saas-docs/pull/39) docs(api): align contracts with rs256, gateway paths and the per-domain data model — merged 2026-09-29
+    - [#40](https://github.com/code-corhuila/barber-saas-docs/pull/40) docs(governance): adapt definition of ready and align context, product and domain with adr-004 — merged 2026-09-29
+    - [#41](https://github.com/code-corhuila/barber-saas-docs/pull/41) docs(architecture): make hexagonal architecture the rule for every service — merged 2026-09-29
+    - [#42](https://github.com/code-corhuila/barber-saas-docs/pull/42) docs: translate the remaining spanish documents to english — merged 2026-09-29
+    - [#44](https://github.com/code-corhuila/barber-saas-docs/pull/44) docs(diagrams): rename section 08-uml to 08-diagrams — merged 2026-09-30
+    - [#45](https://github.com/code-corhuila/barber-saas-docs/pull/45) docs(diagrams): register every diagram in the 08-diagrams index — merged 2026-09-30
+    - [#46](https://github.com/code-corhuila/barber-saas-docs/pull/46) docs(diagrams): add c4 context, container and component diagrams — merged 2026-09-30
+    - [#47](https://github.com/code-corhuila/barber-saas-docs/pull/47) docs(diagrams): add sequence and state diagrams for the critical flows — merged 2026-09-30
+    - [#48](https://github.com/code-corhuila/barber-saas-docs/pull/48) docs(diagrams): add one er diagram per domain database — merged 2026-09-30
+    - [#56](https://github.com/code-corhuila/barber-saas-docs/pull/56) docs(diagrams): align containers and er diagrams with annex j — merged 2026-10-02
+    - [#58](https://github.com/code-corhuila/barber-saas-docs/pull/58) docs(architecture): adopt one instance per engine with a schema per domain — merged 2026-10-02
+    - [#62](https://github.com/code-corhuila/barber-saas-docs/pull/62) docs(architecture): write notifications-api and worker in python — merged 2026-10-02
+    - [#64](https://github.com/code-corhuila/barber-saas-docs/pull/64) docs(architecture): adopt a hybrid mobile app with react and angular domain apps — merged 2026-10-05
+    - [#66](https://github.com/code-corhuila/barber-saas-docs/pull/66) docs(project-control): record the work split of the migration — merged 2026-10-02
+    - [#70](https://github.com/code-corhuila/barber-saas-docs/pull/70) docs(governance): merge every pull request with rebase to keep the small commits — merged 2026-10-02
+    - [#71](https://github.com/code-corhuila/barber-saas-docs/pull/71) docs(diagrams): resolve divergence d-7 with the hybrid mobile app — merged 2026-10-05
+    - [#72](https://github.com/code-corhuila/barber-saas-docs/pull/72) docs(architecture): align the documents with adr-013 — merged 2026-10-05
+  - `barber-saas-api-gateway` (3):
+    - [#2](https://github.com/code-corhuila/barber-saas-api-gateway/pull/2) chore(gateway): add the repository basics — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-api-gateway/pull/3) feat(nginx): add the gateway configuration and the identity-auth routes — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-api-gateway/pull/4) test(ci): run the gateway smoke checks on every pull request — merged 2026-10-02
+  - `barber-saas-front` (4):
+    - [#2](https://github.com/code-corhuila/barber-saas-front/pull/2) chore(front): add the repository basics — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-front/pull/3) feat(http): add the framework-neutral api client and session of the shell — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-front/pull/4) feat(shell): add the angular shell core and the react mount contract — merged 2026-10-02
+    - [#5](https://github.com/code-corhuila/barber-saas-front/pull/5) feat(shell): add the app frame, the domain routes and the native app config — merged 2026-10-02
+  - `barber-saas-identity-auth-api` (10):
+    - [#2](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/2) chore(build): add the maven build and the ci pipeline — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/3) feat(domain): add the user aggregate and its invariants — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/4) feat(application): add the register and login use cases — merged 2026-10-02
+    - [#5](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/5) feat(persistence): add the jdbc and in-memory user repositories — merged 2026-10-02
+    - [#6](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/6) feat(security): sign rs256 tokens and hash passwords — merged 2026-10-02
+    - [#7](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/7) feat(http): add the error envelope, correlation and health — merged 2026-10-02
+    - [#8](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/8) feat(http): expose register, login and the jwks — merged 2026-10-02
+    - [#9](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/9) feat(app): compose and deploy the identity service — merged 2026-10-02
+    - [#10](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/10) feat(http): read the caller's role and tenant, 403, internal routes — merged 2026-10-05
+    - [#11](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/11) feat(http): add POST /internal/v1/owners for the onboarding saga — merged 2026-10-05
+  - `barber-saas-identity-auth-app` (3):
+    - [#2](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/2) chore(app): add the repository basics — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/3) feat(auth): add the sign-in logic of the identity app — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/4) feat(ui): add the login and registration screens — merged 2026-10-02
+  - `barber-saas-identity-auth-db` (3):
+    - [#2](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/2) chore(liquibase): add the liquibase structure and the migration runner — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/3) feat(ddl): add the identity_auth schema and its tables — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/4) feat(dcl): grant the identity_auth schema only to its own user — merged 2026-10-02
+  - `barber-saas-infra-postgres` (6):
+    - [#2](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/2) chore(infra): add the repository basics — merged 2026-10-02
+    - [#3](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/3) feat(postgres): add the single postgresql instance of the platform — merged 2026-10-02
+    - [#4](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/4) feat(compose): include identity-auth in the platform — merged 2026-10-02
+    - [#5](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/5) feat(compose): include the api gateway in the platform — merged 2026-10-02
+    - [#9](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/9) fix(postgres): create btree_gist and refresh existing instances — merged 2026-10-05
+    - [#10](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/10) fix(scripts): one development service token per calling service — merged 2026-10-05
+- *End of the complete record.*
 
 ![Resumen Semana 9](Week-09.jpg)
