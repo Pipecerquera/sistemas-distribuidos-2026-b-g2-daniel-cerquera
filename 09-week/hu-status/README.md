@@ -92,7 +92,7 @@
 - Polyrepo, my phase 1 (pull requests merged to `develop`): https://github.com/code-corhuila/barber-saas-infra/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-db/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-api/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-api-gateway/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-front/pulls?q=is%3Amerged · https://github.com/code-corhuila/barber-saas-identity-auth-app/pulls?q=is%3Amerged
 - CODE, hardcoded secrets still on `develop`: `barbersaas-backend/barbersaas-backend/docker-compose.yml` (lines 8 and 45) at https://github.com/code-corhuila/barber-saas/tree/develop
 - CODE, last config fix (mail credentials): https://github.com/code-corhuila/barber-saas/commit/72c622f
-- **Complete record of my individual work this week** (every pull request I opened, by repository; generated from GitHub):
+- **Complete record of my individual work this week** (every pull request, commit, issue, comment, tag and release of mine; generated from git and GitHub):
   - Pull requests: **53** (53 merged).
   - `barber-saas-docs` (24):
     - [#20](https://github.com/code-corhuila/barber-saas-docs/pull/20) docs(architecture): ADR-004 supersedes ADR-002/003 — full microservice decomposition — merged 2026-09-28
@@ -154,6 +154,280 @@
     - [#5](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/5) feat(compose): include the api gateway in the platform — merged 2026-10-02
     - [#9](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/9) fix(postgres): create btree_gist and refresh existing instances — merged 2026-10-05
     - [#10](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/10) fix(scripts): one development service token per calling service — merged 2026-10-05
+  - Commits: **242** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (13):
+      - [`3d363d9`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/3d363d9595dae892e5ed1c4f3c53d4fae68280d2) docs(week-09): start hu-status delivery — 2026-09-29
+      - [`b82bbbd`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/b82bbbdaeacb57ac6da8e11ab9cf2ef69f66fa3b) docs(week-09): close HU-000-024 — DOCS PRs #44–#48 merged to main — 2026-09-30
+      - [`642212a`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/642212a2056e20d96120f64a5360c25b6700096b) docs(week-09): record 08-diagrams work — DOCS PRs #44–#48 awaiting approval — 2026-09-30
+      - [`b5f29df`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/b5f29dfe93d58d84fa559c2e1d3fa03980ae07f4) docs(week-09): link the annex j, migration and work-split evidence — 2026-10-02
+      - [`1f93a4f`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/1f93a4fc6603acb12cbf356d30a237b318a4e355) docs(week-09): update the self-check with tests, branches and secrets — 2026-10-02
+      - [`7cd90a7`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/7cd90a7778bbc09af873c7ed4a65fc8944f446c4) docs(week-09): plan owner onboarding and the integration — 2026-10-02
+      - [`5fda7d1`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/5fda7d12cd558ee3ace87998040bdcfdf04962af) docs(week-09): update blockers after the annex j decisions — 2026-10-02
+      - [`2304adf`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/2304adfcf9925ab2e355a2d36921e57b3ac81f19) docs(week-09): record my contribution of 2026-10-02 — 2026-10-02
+      - [`11add15`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/11add153ce4db748d34ab9f0340c0104d2cb5f07) docs(week-09): add the annex j, migration and work-split stories — 2026-10-02
+      - [`efceca4`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/efceca4f0237e4a3969b81c40366f194aae78deb) docs(week-09): widen the sprint goal to the annex j migration — 2026-10-02
+      - [`49fdd68`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/49fdd684213d49935356b6a694ccb14c8a7cce92) docs(week-09): keep only my own evidence and add the polyrepo readme risk — 2026-10-02
+      - [`cd7c07a`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/cd7c07a6b55e5438c4dcc326f8aa1a9a663063e9) docs(week-09): add the adr-013 follow-up and the btree_gist fix — 2026-10-04
+      - [`5c79cb9`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/5c79cb91b753d0fa2b066519329d11ee10ce2b55) docs(week-09): mark the annex j and work-split stories done — 2026-10-04
+    - `barber-saas-api-gateway` (15):
+      - [`3c8f0e7`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/3c8f0e75c617fdc171f7171f811d6beb09a0afdb) docs(readme): explain the gateway, how to add a domain and how to test it — 2026-10-02
+      - [`005259c`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/005259c4c86cdc8c80484b503ed0b3eef5a34b09) test(ci): validate the configuration and run the smoke checks on every pull request — 2026-10-02
+      - [`10fb93c`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/10fb93c51e930d7549fa763adb5cf5585633a067) feat(deploy): build the gateway image and publish only port 8000 — 2026-10-02
+      - [`61c54a4`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/61c54a4b6ce4b990d9e8f1f3d945fe29604ce37f) feat(routes): route the identity-auth operations — 2026-10-02
+      - [`b5fec9b`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/b5fec9b17b56c0ea7ef0839d6d467fbfbe901bc5) feat(routes): answer the gateway health check — 2026-10-02
+      - [`45a0f55`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/45a0f551b9c1173eb9c37cb44ea9e5ae255cd9d4) feat(nginx): answer the gateway's own errors with the shared envelope — 2026-10-02
+      - [`9f2f924`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/9f2f924b953aa661bf04b30c0a3b11406e0f66e5) feat(nginx): send the security and cors headers on every response — 2026-10-02
+      - [`ac90d9d`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/ac90d9d28144dfdaf60a17e94d808ad382a9da66) feat(nginx): add rate limits, cors for the app origins and the credentials filter — 2026-10-02
+      - [`3a7e2fe`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/3a7e2fe3a2f17afc0f8bd3a9ffbe31b2af73bebe) feat(nginx): resolve services per request so one down service does not stop the gateway — 2026-10-02
+      - [`565ed54`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/565ed54e6c13199b19148c0abe99588f4ec29365) feat(nginx): log every request as one json line with its correlation id — 2026-10-02
+      - [`7678ed6`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/7678ed68d52add820436b74db21ee40906b7b218) chore(env): state that the gateway holds no secrets — 2026-10-02
+      - [`c168325`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/c168325fe735cee4a43b7371d7c3f4ee819e7474) chore(github): track the story environment on the board — 2026-10-02
+      - [`a0fe6a9`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/a0fe6a9398935e0d36ec74109d95d9676405ac18) chore(github): add the pull request template — 2026-10-02
+      - [`4622ebb`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/4622ebb6c37c84541a3e643c08e725f657faadbf) chore(gateway): keep shell scripts with lf line endings — 2026-10-02
+      - [`7540a48`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/7540a483b05fb98448b7ae9201be4558118130ba) chore(gateway): ignore local env files and keys — 2026-10-02
+    - `barber-saas-docs` (70):
+      - [`5e2d807`](https://github.com/code-corhuila/barber-saas-docs/commit/5e2d807bb87a5499c9051a1db3ddd290eb3b315e) docs(architecture): record the ADRs required by the course norm (#32) — 2026-09-28
+      - [`d6db217`](https://github.com/code-corhuila/barber-saas-docs/commit/d6db217f1161831c34c0dc0c46d706df7aa968b1) docs(governance): align governance rules with the course norm and framework pillars (#30) — 2026-09-28
+      - [`16152b3`](https://github.com/code-corhuila/barber-saas-docs/commit/16152b38f086d2130b6c9d13ed2184cdf8d999ac) docs(governance): align git conventions with course branching policy (#28) — 2026-09-28
+      - [`8c1d057`](https://github.com/code-corhuila/barber-saas-docs/commit/8c1d0571dbfe44ca89422fac95077dfdac39fa78) docs(architecture): adopt full microservice decomposition in adr-004 (#20) — 2026-09-28
+      - [`091c409`](https://github.com/code-corhuila/barber-saas-docs/commit/091c4096a87d70d272d9b9d1e87bd7593683fa0a) docs(architecture): record the ADRs required by the course norm — 2026-09-28
+      - [`58a0462`](https://github.com/code-corhuila/barber-saas-docs/commit/58a04627a3a901113fb6d82fd49953f813201009) docs(governance): align git conventions with course branching policy — 2026-09-28
+      - [`9ea3bb3`](https://github.com/code-corhuila/barber-saas-docs/commit/9ea3bb395a300a9704d04e069243d8ae263a9d9a) docs(governance): align governance rules with the course norm and framework pillars — 2026-09-28
+      - [`cb21837`](https://github.com/code-corhuila/barber-saas-docs/commit/cb2183711019d06901b9b68606e7831ef3b3b767) docs(architecture): rewrite overview for the adr-004 microservice topology — 2026-09-28
+      - [`042aa7c`](https://github.com/code-corhuila/barber-saas-docs/commit/042aa7ce22297cd11b099894ac56c376ec6626c1) docs(architecture): add deployment view for the polyrepo platform — 2026-09-28
+      - [`d0dd0b9`](https://github.com/code-corhuila/barber-saas-docs/commit/d0dd0b9747d6329cf144b233d7049c120d9cd1ee) docs(data): point to the renamed context overview and the proposed barbershop placement — 2026-09-28
+      - [`e12639e`](https://github.com/code-corhuila/barber-saas-docs/commit/e12639ec7b42c3f24b9ebbe13a20c0ee51834232) docs(data): model one database per domain with uuid ids and cents — 2026-09-28
+      - [`88aa5dd`](https://github.com/code-corhuila/barber-saas-docs/commit/88aa5dd9f74d75ccfd593637284bb18d1e35416d) docs(api): translate the five domain contracts to english — 2026-09-28
+      - [`92eb8cd`](https://github.com/code-corhuila/barber-saas-docs/commit/92eb8cd452095474d023dc6f5bcfeba305d49dd4) docs(api): align contracts with rs256, gateway paths and the per-domain data model — 2026-09-28
+      - [`ebedfe0`](https://github.com/code-corhuila/barber-saas-docs/commit/ebedfe0e761f302845ce86187199f5cae2c55b14) docs(governance): adapt definition of ready and align context, product and domain with adr-004 — 2026-09-28
+      - [`1d00703`](https://github.com/code-corhuila/barber-saas-docs/commit/1d0070304f8be4a3337de1fa06f057b678463586) docs(architecture): make hexagonal architecture the rule for every service — 2026-09-28
+      - [`ad2d722`](https://github.com/code-corhuila/barber-saas-docs/commit/ad2d7225b365cadc3c189b0eaee6e5c9e71c52b1) docs: translate the remaining spanish documents to english — 2026-09-28
+      - [`e333bee`](https://github.com/code-corhuila/barber-saas-docs/commit/e333beee575478b62895a73d646516eebe5a9ce1) docs: translate the remaining spanish documents to english (#42) — 2026-09-29
+      - [`acf749d`](https://github.com/code-corhuila/barber-saas-docs/commit/acf749def635754ea3e8290fa52aac8920b1c130) docs(api): align contracts with rs256, gateway paths and the per-domain data model (#39) — 2026-09-29
+      - [`74ff15b`](https://github.com/code-corhuila/barber-saas-docs/commit/74ff15b9e8285b97f3fe4c7abe5dced13f6519e5) docs(architecture): make hexagonal architecture the rule for every service (#41) — 2026-09-29
+      - [`f5251c2`](https://github.com/code-corhuila/barber-saas-docs/commit/f5251c2aba8d5077dd38d1560265f63ffbccc0a9) docs(governance): adapt definition of ready and align context, product and domain with adr-004 (#40) — 2026-09-29
+      - [`f6321e2`](https://github.com/code-corhuila/barber-saas-docs/commit/f6321e241c5541ca241e673d502f9433f432170c) docs(data): model one database per domain with uuid ids and cents (#38) — 2026-09-29
+      - [`8fc0eb5`](https://github.com/code-corhuila/barber-saas-docs/commit/8fc0eb58cf66b3037286aa84bd7193ef91d62269) docs(architecture): add deployment view for the polyrepo platform (#37) — 2026-09-29
+      - [`ee2c8d9`](https://github.com/code-corhuila/barber-saas-docs/commit/ee2c8d9721bd2cd84c0a979c1d5814514992ce37) docs(architecture): rewrite overview for the adr-004 microservice topology (#36) — 2026-09-29
+      - [`1481114`](https://github.com/code-corhuila/barber-saas-docs/commit/14811143cb04c9b5930d54ac5b4889bd9dd35cee) docs(diagrams): add one er diagram per domain database (#48) — 2026-09-30
+      - [`3d440c5`](https://github.com/code-corhuila/barber-saas-docs/commit/3d440c5e5af05d7f8959b739f2f2bb90ed36aae3) docs(diagrams): add sequence and state diagrams for the critical flows (#47) — 2026-09-30
+      - [`e2f5106`](https://github.com/code-corhuila/barber-saas-docs/commit/e2f51064f845d3fa629fa0740d19a040b740526d) docs(diagrams): add c4 context, container and component diagrams (#46) — 2026-09-30
+      - [`0906748`](https://github.com/code-corhuila/barber-saas-docs/commit/090674893b4607698bf5a5970314c351d9cdd660) docs(diagrams): register every diagram in the 08-diagrams index (#45) — 2026-09-30
+      - [`20c3f58`](https://github.com/code-corhuila/barber-saas-docs/commit/20c3f58ea06219de6f504afb3141475a449d161b) docs(diagrams): rename section 08-uml to 08-diagrams (#44) — 2026-09-30
+      - [`4aab6f0`](https://github.com/code-corhuila/barber-saas-docs/commit/4aab6f06898ab0c6856be3fadf2b0a714c89b114) docs(diagrams): remove the old 08-uml diagram index — 2026-09-30
+      - [`cb0de22`](https://github.com/code-corhuila/barber-saas-docs/commit/cb0de22ad63abca621b18c4dd05f045d357929f8) docs(diagrams): add one er diagram per domain database — 2026-09-30
+      - [`059001e`](https://github.com/code-corhuila/barber-saas-docs/commit/059001efe2a106c6f52f67c2f65c495d5fa797be) docs(diagrams): add sequence and state diagrams for the critical flows — 2026-09-30
+      - [`b640c4d`](https://github.com/code-corhuila/barber-saas-docs/commit/b640c4d452b579bd9593438f1c2f30806753b644) docs(diagrams): add c4 context, container and component diagrams — 2026-09-30
+      - [`f381c10`](https://github.com/code-corhuila/barber-saas-docs/commit/f381c10cd676433dec71121865651036f0f2bb19) docs(diagrams): register every diagram in the 08-diagrams index — 2026-09-30
+      - [`cc002af`](https://github.com/code-corhuila/barber-saas-docs/commit/cc002afd90bcee71768bd9b5009b1f8463100f5a) docs(diagrams): rename section 08-uml to 08-diagrams — 2026-09-30
+      - [`9e4c694`](https://github.com/code-corhuila/barber-saas-docs/commit/9e4c69441d1044f13c9df201485326f258daa198) docs(project-control): merge migration pull requests with rebase — 2026-10-02
+      - [`ea71e54`](https://github.com/code-corhuila/barber-saas-docs/commit/ea71e54e0ece5b0b8d2700e5bb4d05a4a2b24022) docs(claude): state rebase and merge for this repository — 2026-10-02
+      - [`c0c8f5e`](https://github.com/code-corhuila/barber-saas-docs/commit/c0c8f5effedb6ab3fb48c59fb5fca2398bedd782) docs(governance): require rebase and merge in the documentation definition of done — 2026-10-02
+      - [`7d605be`](https://github.com/code-corhuila/barber-saas-docs/commit/7d605bead40f8e1a8b2f6c6d029d2742b728a6ea) docs(governance): explain how to promote a story made of several commits — 2026-10-02
+      - [`0ac77ca`](https://github.com/code-corhuila/barber-saas-docs/commit/0ac77ca021475e14763cd8a914bd2e43849f4d00) docs(governance): use rebase and merge into develop to keep every small commit — 2026-10-02
+      - [`0cac041`](https://github.com/code-corhuila/barber-saas-docs/commit/0cac041b32ffb5a5b39490093e8f903c1a281e4c) docs(governance): merge documentation pull requests with rebase — 2026-10-02
+      - [`1af8678`](https://github.com/code-corhuila/barber-saas-docs/commit/1af867833b9924c8a0080db40ab4d03a403b0aa0) docs(deployment): count the two python services of adr-012 in the resource targets — 2026-10-02
+      - [`2a4c4e7`](https://github.com/code-corhuila/barber-saas-docs/commit/2a4c4e79e3eb00f868113d05c51a5775bbdb77f1) docs(project-control): link the work split from the section index — 2026-10-02
+      - [`0b9765a`](https://github.com/code-corhuila/barber-saas-docs/commit/0b9765aa02c2fc798fb08cbb3840760a1e5bd136) docs(project-control): assign one owner to every repository of the migration — 2026-10-02
+      - [`b2393a0`](https://github.com/code-corhuila/barber-saas-docs/commit/b2393a0a0f17f31903e478f0c70c092283cb2e59) docs(architecture): adopt a hybrid mobile app with react and angular domain apps — 2026-10-02
+      - [`b1b0c5a`](https://github.com/code-corhuila/barber-saas-docs/commit/b1b0c5a542f231bcf5409edd090a508de2c0e1b5) docs(diagrams): show the backend languages of adr-012 in c4-02 — 2026-10-02
+      - [`f90e827`](https://github.com/code-corhuila/barber-saas-docs/commit/f90e827769a65f9a4cde018e37a24f25b75bffe1) docs(diagrams): align containers and er diagrams with annex j (#56) — 2026-10-02
+      - [`8f6fe1e`](https://github.com/code-corhuila/barber-saas-docs/commit/8f6fe1ee489b04e2a6e1809c9e88e56ba0b471b4) docs(architecture): write notifications-api and worker in python — 2026-10-02
+      - [`29367f3`](https://github.com/code-corhuila/barber-saas-docs/commit/29367f3f37b11ee50deadaddeaf32d0729467799) docs(architecture): adopt one instance per engine with a schema per domain — 2026-10-02
+      - [`b5795d4`](https://github.com/code-corhuila/barber-saas-docs/commit/b5795d444d598f00c382f17e88526dea1377f04a) docs(diagrams): align containers and er diagrams with annex j — 2026-10-02
+      - [`3a18fb5`](https://github.com/code-corhuila/barber-saas-docs/commit/3a18fb5a1e3aec6b088fac2276f77f7731409db3) docs(diagrams): align seq-04 with the specified onboarding saga — 2026-10-04
+      - [`28bb4db`](https://github.com/code-corhuila/barber-saas-docs/commit/28bb4db1912b7f66239a04d91a2b44d5f2a46395) docs(api): close oq-12 and list the workflow contract — 2026-10-04
+      - [`4c93f21`](https://github.com/code-corhuila/barber-saas-docs/commit/4c93f21a88037e86fc4f5075c6f29835b37f9395) docs(api): specify the owner-onboarding saga in a workflow contract — 2026-10-04
+      - [`fe6b69f`](https://github.com/code-corhuila/barber-saas-docs/commit/fe6b69f79f336d1355ece058394810dbeb0634bd) docs(api): give each calling service its own token — 2026-10-04
+      - [`215fc7d`](https://github.com/code-corhuila/barber-saas-docs/commit/215fc7dd9b65e361924e96eb528996a0b9b9d50d) docs(requirements): add hu-shop-002 for owners to add barbers — 2026-10-04
+      - [`08e9227`](https://github.com/code-corhuila/barber-saas-docs/commit/08e9227ecbbb39adcb6d54a791f8a7d52ca10c87) docs(api): tie the barber profile to the new barber account — 2026-10-04
+      - [`b305905`](https://github.com/code-corhuila/barber-saas-docs/commit/b305905fcaaccc220fe404e0cf2c7a7c526ac14d) docs(api): let an owner create barber accounts — 2026-10-04
+      - [`cfdb9a2`](https://github.com/code-corhuila/barber-saas-docs/commit/cfdb9a248cd4ee766cb88cf8f37be60e0f0a2768) docs(api): state the rule for internal service operations — 2026-10-04
+      - [`bd12c9c`](https://github.com/code-corhuila/barber-saas-docs/commit/bd12c9cf6c13bed62a72e92cba426f9ab235229a) docs(api): add the internal barbershop steps to the barbershop contract — 2026-10-04
+      - [`0063c67`](https://github.com/code-corhuila/barber-saas-docs/commit/0063c67273d90021f61a410dca20ff2b0a4f9976) docs(api): add the internal owner creation to the auth contract — 2026-10-04
+      - [`d7fd2d1`](https://github.com/code-corhuila/barber-saas-docs/commit/d7fd2d1984c0760287bd7abf7c51c76f85929dd2) docs(diagrams): draw the saga store as decided in c4-02 — 2026-10-04
+      - [`4563512`](https://github.com/code-corhuila/barber-saas-docs/commit/456351272ae31221615c79ed103f4c42d374273c) docs(architecture): record adr-009 as accepted in the register — 2026-10-04
+      - [`a05e28a`](https://github.com/code-corhuila/barber-saas-docs/commit/a05e28a431b034cf1e7a1d71ce542f98606e1b44) docs(architecture): accept adr-009 with a workflow schema in the instance — 2026-10-04
+      - [`a8b197e`](https://github.com/code-corhuila/barber-saas-docs/commit/a8b197e4df9cd8f0bdc8c3466e9aeccf16f58271) docs(ux-ui): assign the admin dashboard and barber stats to domains — 2026-10-04
+      - [`9e598b8`](https://github.com/code-corhuila/barber-saas-docs/commit/9e598b8663450ef357f12056dd595c0bfcea7f49) docs(ux-ui): map every prototype screen to its domain app — 2026-10-04
+      - [`4b3e76c`](https://github.com/code-corhuila/barber-saas-docs/commit/4b3e76cb1514e3753e8d0d9ca09b476e9b443e6e) docs(claude): replace the react native stack with adr-013 — 2026-10-04
+      - [`db2c20d`](https://github.com/code-corhuila/barber-saas-docs/commit/db2c20d63fdbc32075dad3dbb05646f631872231) docs(deployment): list what the hybrid mobile app still needs — 2026-10-04
+      - [`ddf1b7e`](https://github.com/code-corhuila/barber-saas-docs/commit/ddf1b7eeef8b0f53cd9086256ded31e58b122c1d) docs(architecture): describe the hybrid mobile app in the overview — 2026-10-04
+      - [`a2ff48c`](https://github.com/code-corhuila/barber-saas-docs/commit/a2ff48c8e1d4c26c28b3a4709c6565427449a9bb) docs(diagrams): mark divergence d-7 resolved by adr-013 — 2026-10-04
+      - [`1aee464`](https://github.com/code-corhuila/barber-saas-docs/commit/1aee464d1605c3e195b603711e2f2c2aa0db9a89) docs(diagrams): add the single-client rule to the container notes — 2026-10-04
+      - [`49dd6e2`](https://github.com/code-corhuila/barber-saas-docs/commit/49dd6e2f66a702bde7265f5a276132f9c700dea7) docs(diagrams): draw the hybrid mobile app in the container diagram — 2026-10-04
+    - `barber-saas-front` (32):
+      - [`eb483f0`](https://github.com/code-corhuila/barber-saas-front/commit/eb483f064127321cf45235646312504a2cad7705) docs(readme): explain the shell and the contract of the react domain apps — 2026-10-02
+      - [`7e219f9`](https://github.com/code-corhuila/barber-saas-front/commit/7e219f9b8ee4b3fd6bf8f70114cfe694edaf9f19) test(ci): build the shell and its federation artefacts on every pull request — 2026-10-02
+      - [`5063db1`](https://github.com/code-corhuila/barber-saas-front/commit/5063db1c289effc4067766bd50cd552043c7abdb) feat(deploy): serve the web build for development and review — 2026-10-02
+      - [`c09c68a`](https://github.com/code-corhuila/barber-saas-front/commit/c09c68ac98db579427acef46a1e16c01fcb9fbc5) feat(capacitor): configure the native app from the shell's build — 2026-10-02
+      - [`32e3b06`](https://github.com/code-corhuila/barber-saas-front/commit/32e3b068eeb19e9a723be79ba5ad46a0394ff32a) feat(layout): add the title bar with the role's sections and sign-out — 2026-10-02
+      - [`2be1c0c`](https://github.com/code-corhuila/barber-saas-front/commit/2be1c0ce614b94e2c019a9cb820b9fd76ab3ac0a) feat(routes): mount sign-in, barbershops, schedule and appointments — 2026-10-02
+      - [`c4463bb`](https://github.com/code-corhuila/barber-saas-front/commit/c4463bb24bb149ab9e022c56581fba7448002b35) feat(remotes): replace an angular domain app that cannot load with a notice — 2026-10-02
+      - [`a2de63b`](https://github.com/code-corhuila/barber-saas-front/commit/a2de63b8e99305d64c16d20379a7fd068ae31eb5) feat(layout): answer unknown addresses — 2026-10-02
+      - [`1865bb6`](https://github.com/code-corhuila/barber-saas-front/commit/1865bb67b001ae3dc9dbf543aedd1182dd1f5a63) feat(layout): greet the user and show their sections — 2026-10-02
+      - [`88fdbd3`](https://github.com/code-corhuila/barber-saas-front/commit/88fdbd3ad6b35eeaf5a77dfea64d08531575080b) feat(layout): list the sections each role may open — 2026-10-02
+      - [`d95db7d`](https://github.com/code-corhuila/barber-saas-front/commit/d95db7d35d8019d58a454fa1814f5bd22d077fe4) feat(shell): provide the only http client of the app, ionic and the router — 2026-10-02
+      - [`d25444f`](https://github.com/code-corhuila/barber-saas-front/commit/d25444f00867be1bd34b43a2c67d5fb82bca6d2c) feat(remotes): mount a react domain app with the shell's client and session — 2026-10-02
+      - [`c260692`](https://github.com/code-corhuila/barber-saas-front/commit/c260692e220536ab75ec9aa53838d89ab50925a8) feat(remotes): define the mount contract of the react domain apps — 2026-10-02
+      - [`5f36a14`](https://github.com/code-corhuila/barber-saas-front/commit/5f36a14a0dcd8d76396ee10099b54d02a7aa3c05) feat(auth): send to sign-in when a protected route has no session — 2026-10-02
+      - [`15c0ce0`](https://github.com/code-corhuila/barber-saas-front/commit/15c0ce0106346b829aa3891cbecf49f7ff186fd9) feat(http): apply the gateway, token, correlation and errors to every angular request — 2026-10-02
+      - [`998d63f`](https://github.com/code-corhuila/barber-saas-front/commit/998d63f7b41cfb5cf91c50cc913a3c4e3bd247fa) feat(session): expose the session to angular as signals — 2026-10-02
+      - [`10ea157`](https://github.com/code-corhuila/barber-saas-front/commit/10ea157a0c60263c8c8ce7849ebf26917c706ab7) feat(shell): add the document, the brand colours and the federation-first bootstrap — 2026-10-02
+      - [`bac4f89`](https://github.com/code-corhuila/barber-saas-front/commit/bac4f89302722c5f2f657764fab55daecf018fc4) feat(federation): expose the api client of the shell and share the frameworks — 2026-10-02
+      - [`848c843`](https://github.com/code-corhuila/barber-saas-front/commit/848c843a7815bf93d3b7ae3c610d6fb068d3e886) chore(build): configure the angular workspace with the native federation builder and ionic styles — 2026-10-02
+      - [`c491019`](https://github.com/code-corhuila/barber-saas-front/commit/c491019a7cd77ede55eab05d09354ffba81b8c30) test(ci): install exactly what was tested and run the unit tests — 2026-10-02
+      - [`d545e5a`](https://github.com/code-corhuila/barber-saas-front/commit/d545e5ad2497111065f453a3735f02f5da94edfb) test(http): cover headers, errors, 401, network failures and non-api urls — 2026-10-02
+      - [`aaf6625`](https://github.com/code-corhuila/barber-saas-front/commit/aaf662542fef76085871eded28a853a9fdca11fb) feat(http): add the one api client the react domain apps use — 2026-10-02
+      - [`3ad6b72`](https://github.com/code-corhuila/barber-saas-front/commit/3ad6b72e6269b354a77b50d9ffbfec8b69c525c0) test(session): cover persistence, expiry and listeners of the session — 2026-10-02
+      - [`d873df3`](https://github.com/code-corhuila/barber-saas-front/commit/d873df37f51b10576236ae39d12015ce7d6e6a6c) feat(session): hold the one session of the app in a framework-neutral store — 2026-10-02
+      - [`d3f2287`](https://github.com/code-corhuila/barber-saas-front/commit/d3f2287c9d0782758e308ab4395424ef6dc933c5) test(http): cover the envelope, timeouts, credentials and validation errors — 2026-10-02
+      - [`8f5b89a`](https://github.com/code-corhuila/barber-saas-front/commit/8f5b89abdfe7111633f3ce24a8f400d9455c5448) feat(http): decide the on-screen message of every api error in one place — 2026-10-02
+      - [`b71cd83`](https://github.com/code-corhuila/barber-saas-front/commit/b71cd837d6cf7ee9a181c56e1bd1066707e20c8d) feat(http): keep the gateway url and the request timeout in one place — 2026-10-02
+      - [`0d70af2`](https://github.com/code-corhuila/barber-saas-front/commit/0d70af20000c4eae464ee71d5265e9268fe9d65c) chore(build): pin angular 21, ionic 8, capacitor 7 and vitest with a lock file — 2026-10-02
+      - [`87eac94`](https://github.com/code-corhuila/barber-saas-front/commit/87eac94760a09dc11701a806bbe043510f1271e2) chore(env): state that the front end holds no secrets — 2026-10-02
+      - [`0f2d439`](https://github.com/code-corhuila/barber-saas-front/commit/0f2d43923e72d07367ea48bb7f7123ae30756350) chore(github): track the story environment on the board — 2026-10-02
+      - [`1bd8885`](https://github.com/code-corhuila/barber-saas-front/commit/1bd88853ad6883322622ad60432fd7349d86e3e2) chore(github): add the pull request template — 2026-10-02
+      - [`350f6f2`](https://github.com/code-corhuila/barber-saas-front/commit/350f6f2d7c6d0d694a470d07024b432b059e461f) chore(front): ignore dependencies, builds and generated federation files — 2026-10-02
+    - `barber-saas-identity-auth-api` (47):
+      - [`1a56d1b`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/1a56d1bb09e337ffbb546763d96b3c3f17fa1bbe) docs(readme): explain the service, how to run and test it, and what is missing — 2026-10-02
+      - [`03a650c`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/03a650cbbde9aac938b6fd88deb682a22e7b971b) chore(env): list every variable without real values — 2026-10-02
+      - [`a3073c7`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/a3073c7bbecfc0cda568008b5b231f493a16b5d2) feat(deploy): build the image and compose the service on the shared instance — 2026-10-02
+      - [`676e8bb`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/676e8bb122bebf3aecef70f4039196050d74d419) test(app): check the http contract with the in-memory repository — 2026-10-02
+      - [`b7241a9`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/b7241a9481cdda28b944cbb8ae9ec6d815d1b29a) feat(app): set timeouts, graceful shutdown and json logs — 2026-10-02
+      - [`8247460`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/8247460265507d4847551c0c608d11753bfe6396) feat(app): wire every port to its adapter with explicit pool limits — 2026-10-02
+      - [`80f0c22`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/80f0c2231dc4891f2293906658bdd99a669d575a) feat(app): add the spring boot entry point — 2026-10-02
+      - [`37a513e`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/37a513ec3cdc11f828a723e1e62e0000212d06e1) chore(build): add the app module that composes the service — 2026-10-02
+      - [`3f88ec2`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/3f88ec25492f1ec80787cdbe5a08fdd9d11f99df) feat(http): expose register, login and the jwks — 2026-10-02
+      - [`e9219e1`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/e9219e183f924345ad2998a2c3758676f7b3ab2c) feat(http): validate the bearer token on protected routes — 2026-10-02
+      - [`c2bce5e`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/c2bce5e87cee4e7f275263311b59492c684c036e) feat(http): answer the liveness probe without a token — 2026-10-02
+      - [`29be8ac`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/29be8ac0945eb1a2f685f0886aa5a33e6f80bc6a) feat(http): reuse or create the correlation id and log one line per request — 2026-10-02
+      - [`96b88e2`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/96b88e236d399b1ac5905b990e5e36f1cd70572f) feat(http): turn every error into one status code and the envelope — 2026-10-02
+      - [`d1cae9a`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/d1cae9a1f4f474f4cc21a35bba46bf9d1dae8e01) feat(http): add the shared error envelope — 2026-10-02
+      - [`fc07121`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/fc07121f85d27b24ddfca353ed343916145ac158) test(security): check issued tokens with the verifier every service uses — 2026-10-02
+      - [`884ad2c`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/884ad2ced4ad63fe3433e2b3254f992032542bde) feat(security): verify rs256 tokens with the public key — 2026-10-02
+      - [`4a9a6ef`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/4a9a6eff5f8eef4f342eafbb1a18f84153f8ee97) feat(security): sign access tokens with rs256 and publish the jwk — 2026-10-02
+      - [`9647852`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/964785214c3b3ac25a736c32f279ef873e7d2894) feat(security): issue opaque refresh tokens stored only as a hash — 2026-10-02
+      - [`d3a99d9`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/d3a99d9fbd2b7edc79128b7d1b7f5e7beb7ef85a) feat(security): hash passwords with bcrypt — 2026-10-02
+      - [`331c2b8`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/331c2b8de95de89d4af0c07aae2ecefc985c4b8c) feat(persistence): store users and idempotency keys in one transaction — 2026-10-02
+      - [`6f3b97e`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/6f3b97e71e67a5600fa77ec4450b2b95c883cbeb) feat(persistence): add an in-memory user repository for runs without a database — 2026-10-02
+      - [`9ac3796`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/9ac3796975a367f142478ee7b022d3a99117c705) feat(persistence): generate identifiers in the service — 2026-10-02
+      - [`7fd4711`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/7fd471145b9da1373e73e266ecb9ff2e7acc35fb) chore(build): add the adapters module with spring web, jdbc and bcrypt — 2026-10-02
+      - [`597585f`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/597585f14a40f9ecb526eeacec70ad7bec90e587) test(application): cover registration, retries, duplicates and login with fake ports — 2026-10-02
+      - [`bc0fecf`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/bc0fecf2b26f2c6eca41e47655ce588e3fc0d5c0) feat(application): register clients idempotently and log users in — 2026-10-02
+      - [`24b825e`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/24b825ea39495ed779e3a4c4c544028ff934e2de) feat(application): declare the password, token and id ports — 2026-10-02
+      - [`95a18c9`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/95a18c924388846f90a4033a199e78a7bb305bf7) feat(application): declare the user repository port with idempotency keys — 2026-10-02
+      - [`3e74701`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/3e74701c9e7b57fd81e5fa86cd462bd7e572eded) feat(application): declare the register and login use cases — 2026-10-02
+      - [`87e3f45`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/87e3f4527dd5b808991a12945d0c1e647331806f) test(domain): cover the tenant, e-mail and name invariants of the user — 2026-10-02
+      - [`ded43da`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/ded43da62ccceff18f1da5059d6572cdad700188) feat(domain): add the user aggregate with its invariants — 2026-10-02
+      - [`38760a4`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/38760a41f3b5a30329dbf4aa553d76a1bb7e41d4) feat(domain): enforce the password policy of the contract — 2026-10-02
+      - [`e00c5ea`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/e00c5ea5a7de82c03f27d67eee925ae3547b44d1) feat(domain): add the business rule violation raised by the domain — 2026-10-02
+      - [`78f97e5`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/78f97e592874843baddd330f17279fb8bf0d918a) feat(domain): add the four user roles and which ones need a barbershop — 2026-10-02
+      - [`4214920`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/4214920926bf32f2b23fbdcd807aa19f324e3bb9) test(ci): build and test every pull request with java 21 — 2026-10-02
+      - [`1d38808`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/1d388081fb34839cfbc7d198aa6f3a80cb5e6873) chore(build): add the core module without any framework dependency — 2026-10-02
+      - [`977601b`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/977601be5211756b1c25ff8594266d6a88a695dc) chore(build): add the maven parent on spring boot 3.5 and java 21 — 2026-10-02
+      - [`11af3af`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/11af3af8d406d3f25081c8e714e298625c704265) chore(github): track the story environment on the board — 2026-10-02
+      - [`4123b2e`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/4123b2e589d28ee5c3bb3f7b2bc2bfedcd79e48b) chore(github): add the pull request template — 2026-10-02
+      - [`9faa6c4`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/9faa6c4fdd5bb49dcab10bb4fd45febe840b4911) chore(build): ignore build output, ide files, env files and keys — 2026-10-02
+      - [`0b55c7b`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/0b55c7bf7051c675a6ae0241c5e8b6a6970409aa) docs(readme): list the barber account operation — 2026-10-04
+      - [`ae9c795`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/ae9c795f45e13d8f7429c03e1f82764fa8990061) feat(http): add POST /api/v1/auth/barbers for owners — 2026-10-04
+      - [`b2c2e77`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/b2c2e77a22235bf47381e924d5b8f1ee9f4f5564) feat(usecase): let an owner add barbers to their own barbershop — 2026-10-04
+      - [`0d65fe3`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/0d65fe395bf39924b50c27ae7e017ed203e57f53) docs(readme): list the internal owner operation — 2026-10-04
+      - [`2aa8f17`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/2aa8f17100eb01852c89ad1cc5e9878b543c16d3) feat(http): add POST /internal/v1/owners for the onboarding saga — 2026-10-04
+      - [`78e8900`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/78e89004ad8c36bd278123c1aa82793c3573a2a3) feat(usecase): create the owner of a new barbershop once per saga step — 2026-10-04
+      - [`08e340a`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/08e340aed7d49248edbdce613e1013f39699acfc) feat(http): read the caller's role and tenant and protect internal routes — 2026-10-04
+      - [`2a14394`](https://github.com/code-corhuila/barber-saas-identity-auth-api/commit/2a1439476f7a37ce56e0079a8d062868872d93f7) feat(http): answer forbidden operations with 403 and the envelope — 2026-10-04
+    - `barber-saas-identity-auth-app` (24):
+      - [`4cdbfd4`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/4cdbfd40bbaa722fd3fe3dd188e3dded246b49a7) docs(readme): explain the identity app, how to run it with the shell and how to test it — 2026-10-02
+      - [`adb2899`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/adb289982be01103ae3cfffff4bc3566cc9bf1a3) test(ci): check the types and build the remote on every pull request — 2026-10-02
+      - [`91a405a`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/91a405a67d0cd392bff63d8b428f701124f8cd58) feat(deploy): serve the built remote for development and review — 2026-10-02
+      - [`d385300`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/d385300d294b1f1004a9f76c8bce8676673a39ed) feat(federation): mount the app in the element the shell provides — 2026-10-02
+      - [`73d3d6e`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/73d3d6e9007dd6ff279a8cb60dee44e3d9a06f80) feat(ui): switch between login and registration and return after sign-in — 2026-10-02
+      - [`03a7b1e`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/03a7b1e771662ae9798c029a24f36d99aad8e054) feat(ui): add the registration screen with one idempotency key per intention — 2026-10-02
+      - [`00f958d`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/00f958dd79e8a61ae11cedf564132e09d874cdb4) feat(ui): add the login screen — 2026-10-02
+      - [`ab99476`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/ab99476feba380a144505dc8a9d3113dba163026) feat(ui): add a labelled field with its error tied by aria-describedby — 2026-10-02
+      - [`472201d`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/472201dd00b9d951d0f7f253b6f11f28032c7756) feat(ui): bring the dark and gold look of the prototype's auth screens — 2026-10-02
+      - [`fcd2e34`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/fcd2e3449e050be2fe197c00973da3cf8ee7b4fc) fix(build): let the federation adapter bring its own esbuild so npm ci works on linux — 2026-10-02
+      - [`49b6327`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/49b63273f329d7b9558897e0c8289ae3425df589) test(ci): install exactly what was tested and run the unit tests — 2026-10-02
+      - [`b835b69`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/b835b69fc6ef2eb9ab4c853790cb05e949a29504) test(auth): cover the api calls and the return address — 2026-10-02
+      - [`395c887`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/395c887634198c81ded9143e70657065e10841ae) feat(auth): return only to internal addresses after sign-in — 2026-10-02
+      - [`8121648`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/81216486244e0aa7a00241daca19316262d707bf) feat(auth): call login and register only through the shell client — 2026-10-02
+      - [`9c76d27`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/9c76d27a271e8eec0fcff1c0020445266bdf5661) test(auth): cover the login and registration field checks — 2026-10-02
+      - [`03b5213`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/03b5213ecd8482780b0fe47836503df7292b58c9) feat(auth): check the fields with the limits of the auth contract — 2026-10-02
+      - [`f416716`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/f4167161ed97a3bc2a9c781a22e368b151afdb18) feat(contract): copy the types of the mount contract with the shell — 2026-10-02
+      - [`943c948`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/943c948c51d4a91560bc46203e4cf7b1b8e1e71f) chore(build): build the remote with the shell's native federation — 2026-10-02
+      - [`5e101b7`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/5e101b74864b646c00852a678a944caf47a78868) chore(federation): expose only the mount entry and share nothing — 2026-10-02
+      - [`a07312e`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/a07312ef575aa51ce0dc8e9c020eeaf24e5f6e47) chore(build): pin ionic react 8, react 19 and native federation with a lock file — 2026-10-02
+      - [`6172234`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/6172234d075733302d6bde44316eaf0751d5fb7e) chore(env): state that the domain app holds no secrets — 2026-10-02
+      - [`271fa75`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/271fa75a5a9474d24bdb68ec9d866eee9217fa23) chore(github): track the story environment on the board — 2026-10-02
+      - [`b12e606`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/b12e606f83de8c27150bfed65109889422fba561) chore(github): add the pull request template — 2026-10-02
+      - [`a414c10`](https://github.com/code-corhuila/barber-saas-identity-auth-app/commit/a414c10e3b77e6a59dc382cd3b0b45bd1745a98b) chore(app): ignore dependencies and builds — 2026-10-02
+    - `barber-saas-identity-auth-db` (17):
+      - [`61a8599`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/61a85998955d5a2a028ab92346ad91b55d3bb225) docs(readme): explain how the schema is migrated and where the data is — 2026-10-02
+      - [`b668f17`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/b668f17945261d6f97c21ed9675eb102f9038047) feat(dcl): grants — 2026-10-02
+      - [`d6edb4b`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/d6edb4b082e587381b51636f3bd6b8c7da2b937f) feat(dcl): create roles — 2026-10-02
+      - [`1273a14`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/1273a1468c82a25f6f2492233abbbf3299091b16) perf(ddl): create indexes — 2026-10-02
+      - [`3704cfd`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/3704cfde4ba7ac9489ef6d5252ff40bfb74d2c99) feat(ddl): add foreign keys — 2026-10-02
+      - [`6565af9`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/6565af9f83e636afffbdd1fc7c25a304e16d919d) feat(ddl): create outbox event — 2026-10-02
+      - [`6380202`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/6380202c86c060755fc441acb3cf26ec13002940) feat(ddl): create idempotency key — 2026-10-02
+      - [`0e04398`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/0e04398afdc342c2ccc25e49131c654257c91cfb) feat(ddl): create password reset token — 2026-10-02
+      - [`7a03bd4`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/7a03bd45f6f2812e6d158313c07d51d745d867d6) feat(ddl): create refresh token — 2026-10-02
+      - [`d77b680`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/d77b680ce8a5eae41a8b563130c48d4d2e0607e2) feat(ddl): create app user — 2026-10-02
+      - [`09f8490`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/09f84900c4fd0c681f5ab755d1e13b83f0540cd0) feat(ddl): create the identity_auth schema — 2026-10-02
+      - [`a12103f`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/a12103fe6ca310ba5b8ca3168139b22a4061fbd1) test(ci): rebuild the schema from an empty database on every pull request — 2026-10-02
+      - [`c1c4e41`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/c1c4e412a2449830d9d8544eae2b83deba063ef6) feat(deploy): add the migration runner with its own changelog tables — 2026-10-02
+      - [`c9a9a72`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/c9a9a72f7029c24ac65ccc3458f06075c32bfcab) chore(liquibase): add the master changelog and the ddl, dml, dcl and tcl families — 2026-10-02
+      - [`984084e`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/984084e499b2c2357dc17fe2b6f0606484f3bf12) chore(github): track the story environment on the board — 2026-10-02
+      - [`0ae3051`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/0ae30512044a65601cb0cc56f5a96459bccf49b3) chore(github): add the pull request template — 2026-10-02
+      - [`e49f43b`](https://github.com/code-corhuila/barber-saas-identity-auth-db/commit/e49f43b62f9b490108d275e44fd07b3045cb4bef) chore(db): ignore local env files and liquibase output — 2026-10-02
+    - `barber-saas-infra-postgres` (18):
+      - [`f010bc5`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/f010bc50eb9f4922141bb6eb8e79245d284412d6) feat(compose): include the api gateway — 2026-10-02
+      - [`5c2b3f4`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/5c2b3f4e760cdff7973df73a97f0aaeb48d59d3e) feat(compose): include the identity-auth schema runner and service — 2026-10-02
+      - [`1f8280c`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/1f8280c48ef1ff99ee130676ae19fe3dea7c2fa8) docs(readme): explain how to start the platform and where the data is — 2026-10-02
+      - [`e7cea59`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/e7cea59d8a34222b4f273d5b7919c4436bc5f5ad) feat(observability): add the collector, prometheus and grafana under a profile — 2026-10-02
+      - [`6be59c9`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/6be59c98bd11239eee994ee25745ab9bc6c2ca00) feat(scripts): generate development rs256 keys and tokens — 2026-10-02
+      - [`a9075c6`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/a9075c6bf0430c74705c85db0d632ff4888444a5) feat(scripts): start, migrate and stop the platform per environment — 2026-10-02
+      - [`d465047`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/d46504727af9f66d6bdc227a0f96b82e26c336fb) feat(env): add one variables file per environment — 2026-10-02
+      - [`b1792a9`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/b1792a91878a1889c17877f0b352b772ba3a417f) feat(postgres): create the extensions and one user per domain on first start — 2026-10-02
+      - [`3160605`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/3160605b3fb3305611dcd5142f7df884ac5376bc) feat(postgres): add the single postgresql instance with its volume — 2026-10-02
+      - [`0fc3c29`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/0fc3c29f2a16616f0a76c91746415b4d952564b8) chore(github): track the story environment on the board — 2026-10-02
+      - [`2f86492`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/2f86492cbffddf1f96557860ed9ee64dd00f79fa) chore(github): add the pull request template — 2026-10-02
+      - [`ba08546`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/ba08546e6b79cc0d7031f6e8e265609756f4b1b0) chore(infra): keep shell scripts with lf line endings — 2026-10-02
+      - [`1fd3eb7`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/1fd3eb7bd6b35e4ecdd1437240de9510f3b8c015) chore(infra): ignore local env files and keys — 2026-10-02
+      - [`b2a9ea3`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/b2a9ea38388e295644c48967638ed1fe77582da6) chore(env): name the two service tokens in every environment — 2026-10-04
+      - [`0966106`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/096610642acc0a18aa49fdffbb5c772152400abd) fix(scripts): issue one development service token per service — 2026-10-04
+      - [`eb7a9c0`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/eb7a9c0f508e4a13adc576ecfce2c8ba9ca57971) docs(readme): explain that migrate.sh refreshes the instance first — 2026-10-04
+      - [`e98779d`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/e98779dc7acbc15c1885b7211137fe2326f4a2c6) fix(scripts): apply the instance script again before migrating — 2026-10-04
+      - [`1b17d47`](https://github.com/code-corhuila/barber-saas-infra-postgres/commit/1b17d47d442237e466379f2605de40526bb9f914) fix(postgres): create the btree_gist extension in the instance — 2026-10-04
+    - `barber-saas-workflow` (6):
+      - [`5b19c8f`](https://github.com/code-corhuila/barber-saas-workflow/commit/5b19c8f55609a0b2bc5ce42c12011ae7a626c896) ci(db): migrate the workflow schema and check it rebuilds — 2026-10-04
+      - [`40e4a5c`](https://github.com/code-corhuila/barber-saas-workflow/commit/40e4a5caf67842f29f5605e5a34d94fac0e4c047) feat(db): version the workflow schema with its saga table — 2026-10-04
+      - [`a1d0934`](https://github.com/code-corhuila/barber-saas-workflow/commit/a1d0934b442a4d8441ff2a25441c3f5faafde30c) docs(readme): explain what the workflow service is — 2026-10-04
+      - [`81bfec2`](https://github.com/code-corhuila/barber-saas-workflow/commit/81bfec2342e5891793f26150cadb4fc04311f9ef) chore(repo): add the pull request template and board tracking — 2026-10-04
+      - [`f11d184`](https://github.com/code-corhuila/barber-saas-workflow/commit/f11d1849b713e2389a14906aaa79f2178d9a01b8) ci(build): build and test the workflow on every pull request — 2026-10-04
+      - [`d255b16`](https://github.com/code-corhuila/barber-saas-workflow/commit/d255b16816ab971985cda7cff82969e2ae48c18d) chore(app): lay out the hexagonal workflow service — 2026-10-04
+  - Issues opened: **14**:
+    - [barber-saas-docs#76](https://github.com/code-corhuila/barber-saas-docs/issues/76) HU-SHOP-002 — Add barbers to my barbershop — 2026-10-04 (open)
+    - [barber-saas-docs#69](https://github.com/code-corhuila/barber-saas-docs/issues/69) Use rebase and merge everywhere so every small commit stays in the history — 2026-10-02 (closed)
+    - [barber-saas-docs#68](https://github.com/code-corhuila/barber-saas-docs/issues/68) HU-SHOP-001-B — Manage staff weekly schedules and exceptions — 2026-10-02 (open)
+    - [barber-saas-docs#67](https://github.com/code-corhuila/barber-saas-docs/issues/67) HU-SHOP-001-A — Configure the barbershop's service catalog — 2026-10-02 (open)
+    - [barber-saas-docs#65](https://github.com/code-corhuila/barber-saas-docs/issues/65) Record the work split of the migration to the 29 repositories — 2026-10-02 (closed)
+    - [barber-saas-docs#63](https://github.com/code-corhuila/barber-saas-docs/issues/63) Record the interface decision: hybrid mobile app with React and Angular domain apps (Annex J) — 2026-10-02 (closed)
+    - [barber-saas-docs#61](https://github.com/code-corhuila/barber-saas-docs/issues/61) Use two backend languages (Annex J): Python for notifications-api and worker — 2026-10-02 (closed)
+    - [barber-saas-docs#60](https://github.com/code-corhuila/barber-saas-docs/issues/60) Question: how do Annex J's React and Angular portals apply to a mobile-only project? (ADR-008) — 2026-10-02 (open)
+    - [barber-saas-docs#59](https://github.com/code-corhuila/barber-saas-docs/issues/59) Request: create barber-saas-infra-mongo and rename barber-saas-infra to barber-saas-infra-postgres (Annex J J.8) — 2026-10-02 (closed)
+    - [barber-saas-docs#57](https://github.com/code-corhuila/barber-saas-docs/issues/57) Align the database topology with Annex J: one instance per engine, one schema per domain — 2026-10-02 (closed)
+    - [barber-saas-docs#55](https://github.com/code-corhuila/barber-saas-docs/issues/55) Align 08-diagrams with Annex J (single instance per engine) — 2026-10-02 (closed)
+    - [barber-saas-docs#43](https://github.com/code-corhuila/barber-saas-docs/issues/43) Rename 08-uml to 08-diagrams and draw the system diagrams — 2026-09-30 (closed)
+    - [barber-saas-docs#31](https://github.com/code-corhuila/barber-saas-docs/issues/31) Record the ADRs required by the course norm — 2026-09-28 (closed)
+    - [barber-saas-docs#29](https://github.com/code-corhuila/barber-saas-docs/issues/29) Align 00-governance with the course norm and framework pillars — 2026-09-28 (closed)
+  - Comments on pull requests and issues: **5** (answers to the automated review, tracking and backlog notes):
+    - [barber-saas-docs#27](https://github.com/code-corhuila/barber-saas-docs/pull/27#issuecomment-5879148988) — 2026-09-28
+    - [barber-saas-docs#18](https://github.com/code-corhuila/barber-saas-docs/pull/18#issuecomment-5879150052) — 2026-09-28
+    - [barber-saas-docs#17](https://github.com/code-corhuila/barber-saas-docs/pull/17#issuecomment-5879151000) — 2026-09-28
+    - [barber-saas-docs#15](https://github.com/code-corhuila/barber-saas-docs/pull/15#issuecomment-5879151826) — 2026-09-28
+    - [barber-saas-docs#60](https://github.com/code-corhuila/barber-saas-docs/issues/60#issuecomment-5955977627) — 2026-10-02
+  - Tags and releases: **0**.
 - *End of the complete record.*
 
 ![Resumen Semana 9](Week-09.jpg)
