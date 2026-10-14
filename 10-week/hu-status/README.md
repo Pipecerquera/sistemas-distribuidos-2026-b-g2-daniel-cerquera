@@ -263,8 +263,8 @@
     - [#15](https://github.com/code-corhuila/barber-saas-workflow/pull/15) chore(release): promote MVP 2 to qa with cherry-pick -x — merged 2026-10-08
     - [#16](https://github.com/code-corhuila/barber-saas-workflow/pull/16) chore(release): fill release 2.0.0 from qa with cherry-pick -x — merged 2026-10-08
     - [#17](https://github.com/code-corhuila/barber-saas-workflow/pull/17) release: 2.0.0 — MVP 2 (corte 2) — merged 2026-10-09
-  - Commits: **246** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
-    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (8):
+  - Commits: **254** changes authored by me, each listed once (the copies a rebase merge or a `cherry-pick -x` promotion to `qa`, `release.2.0.0` and `main` makes keep the same author date and message, so they are not repeated; the promotion pull requests above carry their trail).
+    - `sistemas-distribuidos-2026-b-g2-daniel-cerquera` (16):
       - [`d9e977a`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/d9e977aa290749bbc83349717c5a4fd9518b52a1) docs(week-09): add owner onboarding and barber accounts — 2026-10-05
       - [`3bbac33`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/3bbac33d856f1af26c2deb0aef33dd4141ce0731) docs(week-10): the automatic sticker and the loyalty tab are in — 2026-10-07
       - [`931460e`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/931460ec24fb612a2aacd4f15da54853d463ec8d) docs(week-10): report persistence, events, platform admin and the plan step — 2026-10-07
@@ -273,6 +273,14 @@
       - [`fbae665`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/fbae66595c68276ae59a75e2fb9ccca57bac3baf) docs(week-08): add the complete record of the week — 2026-10-08
       - [`a9634ed`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/a9634ed033c2236380b1b90778db0bba5db78fa2) docs(week-07): add the ADR-004 draft and the committed mail-credentials fix — 2026-10-08
       - [`79f49ea`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/79f49eadbdc353d768029c1789bcf7a4a4cda134) docs(week-06): correct the commits that landed at the end of the week — 2026-10-08
+      - [`c6c2192`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/c6c219226b267377a88203c1117503158b85259e) docs(week-06): record every commit of the week — 2026-10-09
+      - [`ec97bab`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/ec97babad86a7e1a6627a3bdbc851831b9dcadbd) docs(week-07): record every commit of the week — 2026-10-09
+      - [`cd44bae`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/cd44baee63b2605dd3e1d6f42a0d681f102c044b) docs(week-08): record every commit, issue and comment of the week — 2026-10-09
+      - [`e13e024`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/e13e0244e159a7cfb59e28ff1a64d056b8501b22) docs(week-09): record every commit, issue and comment of the week — 2026-10-09
+      - [`9f6ea85`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/9f6ea85f2179583ada907eceacf6522f504c2fd2) docs(week-10): close release 2.0.0 and record all the evidence of the week — 2026-10-09
+      - [`aef0e6f`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/aef0e6f801f7a58a0217d2bacaa6981429286a7d) docs(week-10): add the sprint closure, the ceremonies and the open DOCS pull request — 2026-10-09
+      - [`91811a4`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/91811a4a13f4b4d05f8e9679607279835f054596) docs(week-10): DOCS #112 approved and merged — 2026-10-09
+      - [`96964e9`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/96964e95c46e614f445a8643851e0b0ee1443fe1) docs(week-10): add the c2-release delivery and the demo video — 2026-10-13 (release delivery)
     - `barber-saas-api-gateway` (7):
       - [`622f35c`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/622f35c2da9370020d3b57f69234cd35d5c4c91b) test(smoke): check the saga routes and that /internal is never routed — 2026-10-05
       - [`5fb1d4d`](https://github.com/code-corhuila/barber-saas-api-gateway/commit/5fb1d4d5bce362a7b1886911c5b6513b239cc3db) feat(routes): route the workflow's saga operations — 2026-10-05
