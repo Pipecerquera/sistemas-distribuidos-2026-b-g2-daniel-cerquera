@@ -68,3 +68,6 @@
     - `sistemas-distribuidos-2026-b-g2-daniel-cerquera`: [`d32d49e`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/d32d49e) docs(week-10): list the hu-status commits of 2026-10-09 and 2026-10-13 — 2026-10-13
   - Issues opened: 0 · comments: 0 · tags and releases: 0.
   - Off-GitHub work of the week: the Moodle delivery of corte 2 (2026-10-13), the final presentation and its live demos (2026-10-15), and the observability plan in this folder.
+- *End of the complete record.*
+
+![Resumen Semana 11](Week-11.jpg)
