@@ -27,3 +27,4 @@ centred on one microservice and followed across services, the event relay and th
 | CP2 | [`02-log-contract.md`](02-log-contract.md) |
 | CP3 | [`03-instrumentation/`](03-instrumentation/) |
 | CP4 | [`04-metrics.md`](04-metrics.md) |
+| CP6 | [`05-slo.md`](05-slo.md) |
