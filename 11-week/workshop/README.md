@@ -28,3 +28,4 @@ centred on one microservice and followed across services, the event relay and th
 | CP3 | [`03-instrumentation/`](03-instrumentation/) |
 | CP4 | [`04-metrics.md`](04-metrics.md) |
 | CP6 | [`05-slo.md`](05-slo.md) |
+| CP7 | [`06-alerts.yml`](06-alerts.yml), [`06-alert-policy.md`](06-alert-policy.md) |

@@ -1,0 +1,62 @@
+# SLO-A (05-slo.md): 99.5 % of POST /api/v1/appointments answered without outcome="failed",
+# 30-day window, error budget 0.005. Multi-window multi-burn-rate alerts on appointment-api.
+groups:
+  - name: appointment-book-slo-a-recording
+    interval: 30s
+    rules:
+      - record: appointment_book:error_ratio:rate5m
+        expr: |
+          sum(rate(appointment_book_requests_total{outcome="failed"}[5m]))
+          /
+          sum(rate(appointment_book_requests_total[5m]))
+      - record: appointment_book:error_ratio:rate30m
+        expr: |
+          sum(rate(appointment_book_requests_total{outcome="failed"}[30m]))
+          /
+          sum(rate(appointment_book_requests_total[30m]))
+      - record: appointment_book:error_ratio:rate1h
+        expr: |
+          sum(rate(appointment_book_requests_total{outcome="failed"}[1h]))
+          /
+          sum(rate(appointment_book_requests_total[1h]))
+      - record: appointment_book:error_ratio:rate6h
+        expr: |
+          sum(rate(appointment_book_requests_total{outcome="failed"}[6h]))
+          /
+          sum(rate(appointment_book_requests_total[6h]))
+
+  - name: appointment-book-slo-a-alerts
+    rules:
+      - alert: AppointmentBookingFastBurn
+        # Burn rate 14.4 over 1h, confirmed over 5m: 14.4 x 0.005 = 0.072 failed share.
+        expr: |
+          appointment_book:error_ratio:rate1h > (14.4 * 0.005)
+          and
+          appointment_book:error_ratio:rate5m > (14.4 * 0.005)
+        for: 2m
+        labels:
+          severity: page
+          team: barbersaas
+          service: appointment-api
+          slo: SLO-A
+        annotations:
+          summary: "Bookings failing fast: {{ $value | humanizePercentage }} of POST /api/v1/appointments failed over 5m, SLO-A budget burning at more than 14.4x"
+          description: "At this rate the 30-day budget of 210 failed bookings is gone in about 50 hours."
+          runbook_url: "https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/blob/main/11-week/workshop/07-runbook.md"
+
+      - alert: AppointmentBookingSlowBurn
+        # Burn rate 6 over 6h, confirmed over 30m: 6 x 0.005 = 0.03 failed share.
+        expr: |
+          appointment_book:error_ratio:rate6h > (6 * 0.005)
+          and
+          appointment_book:error_ratio:rate30m > (6 * 0.005)
+        for: 15m
+        labels:
+          severity: ticket
+          team: barbersaas
+          service: appointment-api
+          slo: SLO-A
+        annotations:
+          summary: "Bookings failing steadily: {{ $value | humanizePercentage }} of POST /api/v1/appointments failed over 30m, SLO-A budget burning at more than 6x"
+          description: "At this rate the 30-day budget of 210 failed bookings is gone in about 5 days."
+          runbook_url: "https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/blob/main/11-week/workshop/07-runbook.md"
