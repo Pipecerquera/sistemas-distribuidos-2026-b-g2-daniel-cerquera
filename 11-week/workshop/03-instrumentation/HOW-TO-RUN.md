@@ -22,7 +22,7 @@ step 6). Persistence in the `appointment` schema and the `outbox_event` relay ar
 ## Install and test
 
 ```bash
-cd 11-week/hu-status/workshop/03-instrumentation/appointment-api
+cd 11-week/workshop/03-instrumentation/appointment-api
 mvn -B test
 ```
 

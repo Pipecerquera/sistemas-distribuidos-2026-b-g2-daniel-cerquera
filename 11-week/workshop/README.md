@@ -15,7 +15,7 @@ centred on one microservice and followed across services, the event relay and th
 - GITHUB_USER: Pipecerquera
 - TEAM: Barbersaas
 - DOCS_REPO: https://github.com/code-corhuila/barber-saas-docs
-- REFLECTION_DOC: <REFLECTION_DOC_URL>
+- REFLECTION_DOC: https://docs.google.com/document/d/1erMzjLal43pDEHyi55X2uAn33XLIoeznSuEgisjNJ5Y/edit?usp=sharing
 - JOURNEY: Book an appointment (HU-APPT-001-A) - `appointment-api`, `POST /api/v1/appointments`
 <!-- CONFIG-END -->
 
