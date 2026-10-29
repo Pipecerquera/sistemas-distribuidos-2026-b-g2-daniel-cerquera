@@ -1,0 +1,62 @@
+name: Security gates
+
+# Proposal for the CI of identity-auth-api (TB1 Internet -> edge, issues #155-#157 of
+# barber-saas-docs). It runs next to ci.yml on every Pull Request; the three gates run in the
+# order of the threat model: secrets first (fastest), then dependencies, then the
+# authorization tests.
+
+on:
+  pull_request:
+    branches: [develop, qa, main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  secret-scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  dependency-audit:
+    needs: secret-scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Dependency audit (OWASP dependency-check, fails on CVSS >= 7)
+        run: >
+          mvn -B org.owasp:dependency-check-maven:12.1.0:aggregate
+          -DfailBuildOnCVSS=7
+          -DnvdApiKey=${{ secrets.NVD_API_KEY }}
+
+  authorization-tests:
+    needs: secret-scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Negative authorization tests (expired token -> 401)
+        run: mvn -B -pl identity-auth-app -am test -Dtest='ExpiredAccessTokenHttpTest' -Dsurefire.failIfNoSpecifiedTests=false
