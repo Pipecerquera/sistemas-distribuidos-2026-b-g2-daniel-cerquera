@@ -74,3 +74,18 @@
 - *End of the complete record.*
 
 ![Resumen Semana 13](Week-13.jpg)
+
+## 7. Threat modeling workshop (2026-10-29, in class)
+
+Boundary **TB1 Internet -> edge (Caddy + `api-gateway`)**, claimed in [#150](https://github.com/code-corhuila/barber-saas-docs/issues/150). Work in
+[`13-week/workshop/`](../workshop/); library book: Nilsson, *Inteligencia artificial: una nueva
+síntesis*, call number 006.3 N347 (record 08:20).
+
+| Checkpoint | Result | Evidence |
+|---|---|---|
+| CP0 | Claim issue and workshop CONFIG | [#150](https://github.com/code-corhuila/barber-saas-docs/issues/150) · [`3e89a01`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/3e89a01) |
+| CP1 | Data flow with TB1-TB5, 7 assets, entry points of TB1 | [`dd75d47`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/dd75d47) |
+| CP2 | STRIDE of TB1, risk ranking, residual risk, [B] row D | [PR #153](https://github.com/code-corhuila/barber-saas-docs/pull/153) (`af96937`, `d26c922`) |
+| CP3 | Stories D (P0), S (P1), E (P2) on the team board | [#155](https://github.com/code-corhuila/barber-saas-docs/issues/155) · [#156](https://github.com/code-corhuila/barber-saas-docs/issues/156) · [#157](https://github.com/code-corhuila/barber-saas-docs/issues/157) · [`5ca13c5`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/5ca13c5) |
+| CP4 | `security.yml` (gitleaks, dependency-check, authz tests) and the negative test of #156 | [`d83061c`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/d83061c) · [`82b33c5`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/82b33c5) |
+| CP5 | Review of Juan Pablo's STRIDE (worker -> `/internal`): row D needs the cap on the callee, row S needs a token lifetime | [PR #154](https://github.com/code-corhuila/barber-saas-docs/pull/154) review comment |
