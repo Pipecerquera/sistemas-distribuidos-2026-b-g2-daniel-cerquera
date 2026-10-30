@@ -75,7 +75,7 @@
 
 ![Resumen Semana 13](Week-13.jpg)
 
-## 7. Threat modeling workshop (2026-10-29, in class)
+## 7. Threat modeling workshop (2026-10-29 in class, 2026-10-30 final delivery)
 
 Boundary **TB1 Internet -> edge (Caddy + `api-gateway`)**, claimed in [#150](https://github.com/code-corhuila/barber-saas-docs/issues/150). Work in
 [`13-week/workshop/`](../workshop/); library book: Nilsson, *Inteligencia artificial: una nueva
@@ -89,3 +89,7 @@ síntesis*, call number 006.3 N347 (record 08:20).
 | CP3 | Stories D (P0), S (P1), E (P2) on the team board | [#155](https://github.com/code-corhuila/barber-saas-docs/issues/155) · [#156](https://github.com/code-corhuila/barber-saas-docs/issues/156) · [#157](https://github.com/code-corhuila/barber-saas-docs/issues/157) · [`5ca13c5`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/5ca13c5) |
 | CP4 | `security.yml` (gitleaks, dependency-check, authz tests) and the negative test of #156 | [`d83061c`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/d83061c) · [`82b33c5`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/82b33c5) |
 | CP5 | Review of Juan Pablo's STRIDE (worker -> `/internal`): row D needs the cap on the callee, row S needs a token lifetime | [PR #154](https://github.com/code-corhuila/barber-saas-docs/pull/154) review comment |
+| CP6 | Review of Juan Pablo addressed: row I is now account enumeration (risk 4), linked to Carolay's #162 | [PR #153](https://github.com/code-corhuila/barber-saas-docs/pull/153) (`6a5a1e8`) · [reply](https://github.com/code-corhuila/barber-saas-docs/pull/153#issuecomment-6500185907) |
+| CP7 | Testable criteria in the three stories; #155 adds unknown e-mails and a validated trace id (Carolay's finding); linked to #162, #164, #166, #167 | [#155](https://github.com/code-corhuila/barber-saas-docs/issues/155) · [#156](https://github.com/code-corhuila/barber-saas-docs/issues/156) · [#157](https://github.com/code-corhuila/barber-saas-docs/issues/157) · [`935bf75`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/935bf75) |
+| CP8 | Negative test of #156 run against `identity-auth-api`: 2 tests, 0 failures, `BUILD SUCCESS`; `security.yml` valid with actionlint 1.7.7 | [`b49c05d`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/b49c05d) · [`HOW-TO-RUN.md`](../workshop/04-security-ci/HOW-TO-RUN.md) |
+| CP9 | Implementation plan for my project, written by hand in the reflection document | W13 Reflection document (shared with the teacher) · this commit |
