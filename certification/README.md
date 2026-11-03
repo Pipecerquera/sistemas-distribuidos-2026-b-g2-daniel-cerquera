@@ -19,7 +19,10 @@
 | Date | Hours | Chapters or labs | Evidence file |
 |---|---|---|---|
 | 2026-10-28 | 2 | Enrollment, pre-class guidance and chapters 1 to 6 | evidence/00-enrollment.png, evidence/01-chapter-01.png … evidence/06-chapter-06.png |
-| Total | 2 | | |
+| 2026-10-29 | 6 | Chapter 7 | evidence/07-chapter-07.png |
+| 2026-10-30 | 5 | Chapter 8 | evidence/08-chapter-08.png |
+| 2026-11-03 | 6 | Chapter 9 | evidence/09-chapter-09.png |
+| Total | 19 | | |
 
 ## Labs
 
