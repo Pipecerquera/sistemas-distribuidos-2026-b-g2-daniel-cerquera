@@ -5,33 +5,58 @@
 # Weekly Status - Week 14
 
 <!-- CONFIG-START - must match your profile repo (username/username) CONFIG -->
-- FULL_NAME:
-- GITHUB_USER:
-- TEAM:
-- SPRINT_GOAL:
+- FULL_NAME: Daniel Felipe Cerquera Idrobo
+- GITHUB_USER: Pipecerquera
+- TEAM: Barbersaas
+- SPRINT_GOAL: Close MVP 3 for release 3.0.0: run `develop` of the 30 repositories end to end, fix the real security findings of the week 13 workshop before the public deployment, promote my repositories to `qa` with `git cherry-pick -x`, record the 3.0.0 changelog, and deploy the platform on an Oracle Cloud Always Free VM.
 <!-- CONFIG-END -->
 
 ## 1. User stories worked this week
 | HU ID | Title | Status (todo/doing/done) | Evidence (PR or commit URL) |
 |---|---|---|---|
-| HU-XXX-001 |  |  |  |
+| HU-000-066 | As the team, we want `develop` of the 30 repositories tested together before promoting it, so `qa` only receives a platform that works end to end | **done — 2026-11-03** | Dev platform with 13 containers, migrations on an existing volume: MVP 3 script 19/19, security script 11/11, journey of every role 34/34 (owner saga, catalog, barber week, booking, complete, review, tenant isolation, suspension and reactivation, events delivered), and the probes of the week 13 workshop stories (9 of 10 safe; the tenth, [#165](https://github.com/code-corhuila/barber-saas-docs/issues/165), belongs to Carlos and he fixed it on 2026-11-04 in [barbershop-api #26](https://github.com/code-corhuila/barber-saas-barbershop-api/pull/26)) |
+| HU-000-067 | As the operator, I want the security findings of my trust boundary (TB1) fixed before the public deployment: a stolen access token dies within 15 minutes ([#156](https://github.com/code-corhuila/barber-saas-docs/issues/156)), sign-in locks after repeated failures and a malformed correlation id cannot break the error body ([#155](https://github.com/code-corhuila/barber-saas-docs/issues/155)), and sign-up does not reveal which e-mails exist ([#167](https://github.com/code-corhuila/barber-saas-docs/issues/167)) | **done — merged 2026-11-03** | [identity-auth-api #27](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/27) (10 failures in 15 min → 429, also for unknown e-mails; access token 900 s; a taken e-mail on public sign-up answers the same 201 without saving or sending a code; 104 tests) · [api-gateway #21](https://github.com/code-corhuila/barber-saas-api-gateway/pull/21) (`X-Correlation-Id` kept only when it is a UUID or 32 hex characters; smoke +4 checks) · [DOCS #169](https://github.com/code-corhuila/barber-saas-docs/pull/169) (`authentication.md`, `auth-service.yaml`) |
+| HU-000-068 | As the team, we want MVP 3 promoted from `develop` to `qa` in my 10 repositories with the trail of every commit | **done — 2026-11-03 and 2026-11-05** | 95 commits re-applied with `git cherry-pick -x`, one PR per repository: [identity-auth-db #14](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/14) · [identity-auth-api #28](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/28) · [identity-auth-app #16](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/16) · [platform-admin-db #9](https://github.com/code-corhuila/barber-saas-platform-admin-db/pull/9) · [platform-admin-api #23](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/23) · [platform-admin-app #14](https://github.com/code-corhuila/barber-saas-platform-admin-app/pull/14) · [api-gateway #22](https://github.com/code-corhuila/barber-saas-api-gateway/pull/22) · [worker #20](https://github.com/code-corhuila/barber-saas-worker/pull/20) · [infra-postgres #38](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/38) · [front #29](https://github.com/code-corhuila/barber-saas-front/pull/29); the tree of `qa` equals `develop` in my 12 repositories and `main` stays on v2.0.0 |
+| HU-000-069 | As the team, we want the `[3.0.0]` section of `CHANGELOG.md` in every repository that changed since 2.0.0, so the release notes come from real commits | **done — 2026-11-05** | Generated from `git log` since the last commit released in 2.0.0, grouped by commit type, with the stories of each repository. To `develop`: [identity-auth-db #15](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/15) · [identity-auth-api #29](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/29) · [identity-auth-app #17](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/17) · [platform-admin-db #10](https://github.com/code-corhuila/barber-saas-platform-admin-db/pull/10) · [platform-admin-api #24](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/24) · [platform-admin-app #15](https://github.com/code-corhuila/barber-saas-platform-admin-app/pull/15) · [front #30](https://github.com/code-corhuila/barber-saas-front/pull/30) · [worker #21](https://github.com/code-corhuila/barber-saas-worker/pull/21) · [api-gateway #23](https://github.com/code-corhuila/barber-saas-api-gateway/pull/23) · [infra-postgres #40](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/40); to `qa`: [identity-auth-db #16](https://github.com/code-corhuila/barber-saas-identity-auth-db/pull/16) · [identity-auth-api #30](https://github.com/code-corhuila/barber-saas-identity-auth-api/pull/30) · [identity-auth-app #18](https://github.com/code-corhuila/barber-saas-identity-auth-app/pull/18) · [platform-admin-db #11](https://github.com/code-corhuila/barber-saas-platform-admin-db/pull/11) · [platform-admin-api #25](https://github.com/code-corhuila/barber-saas-platform-admin-api/pull/25) · [platform-admin-app #16](https://github.com/code-corhuila/barber-saas-platform-admin-app/pull/16) · [front #31](https://github.com/code-corhuila/barber-saas-front/pull/31) · [worker #22](https://github.com/code-corhuila/barber-saas-worker/pull/22) · [api-gateway #24](https://github.com/code-corhuila/barber-saas-api-gateway/pull/24) · [infra-postgres #41](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/41) |
+| HU-000-055 | As the team, we want BarberSaaS deployed to a cloud host from the release candidate, with HTTPS and health checks (from week 12) | **doing — account ready, waiting for capacity** | Oracle lowered the Always Free A1 limit to 2 OCPU / 12 GB; the guide and ADR-019 were updated ([infra-postgres #39](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/39), [DOCS #170](https://github.com/code-corhuila/barber-saas-docs/pull/170)); the platform uses about 2.1 GB, so it fits. The Oracle Cloud account (São Paulo) was created on 2026-11-05; the console answers "Out of capacity" for the A1 shape (2/12 and 1/6), so a script asks the API for the VM every minute with the public IP, the SSH key and a cloud-init that clones `qa` |
+| HU-000-057 | As the operator, I want a rehearsed and timed rollback, so a bad release is undone in under 2 minutes (story DEP-05, from week 12) | todo | Depends on the VM of HU-000-055; procedure in [`../../12-week/hu-status/deployment-plan.md`](../../12-week/hu-status/deployment-plan.md) §6 |
+| HU-000-065 | As a student, I want to take the Huawei HCCDP-Solution Architectures course of the third cut and keep its evidence in this repository | **doing** | [`7387098`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/7387098) (chapters 7 to 9 and the study log); chapter 10 studied on 2026-11-04 (25 hours in the log of [`certification/`](../../certification/)) |
 
 ## 2. My individual contribution
--
+- **End-to-end test of `develop` before `qa`** (2026-11-03): brought up the 30 repositories together and ran four scripts against the real platform; the only real failures were the workshop findings, which I fixed the same day in my repositories and sent to Carlos for his (#165).
+- **Security fixes of TB1**: sign-in lock (port `SignInFailures` with a bounded in-memory adapter, 429 after 10 failures in 15 minutes), 15-minute access tokens, a public sign-up that answers a taken e-mail like a new one, and the correlation-id filter in the gateway, each with tests that fail without the fix; contracts updated in DOCS.
+- **Promotion to `qa`**: 95 commits cherry-picked with `-x` into 10 repositories with one PR each and the trail table in its body; checked that the tree of `qa` equals `develop` and that every commit carries its `cherry picked from` line.
+- **Changelog 3.0.0**: wrote the section from the commits of each repository since 2.0.0 and promoted it to `qa` (20 PRs).
+- **Deployment**: updated the Oracle guide and ADR-019 to the new free limit, created the Oracle Cloud account, the network and the firewall rules (80 and 443), and wrote the script that requests the VM until there is capacity.
+- **Team follow-up**: Carlos fixed #165 and promoted his repositories to `qa` with their changelog on 2026-11-04; Juan Pablo has his promotion prompt for appointment and finance-inventory.
+- **Huawei certification**: chapter 9 (2026-11-03) and chapter 10 (2026-11-04), 6 hours each.
 
 ## 3. Blockers and risks
--
+- **No Always Free capacity in São Paulo**: the A1 shape is out of capacity (the region has a single availability domain). The retry script keeps asking; if Oracle does not give the VM in time, the fallback is to run the platform on a laptop and publish it with a Cloudflare tunnel (public HTTPS, but only while the laptop is on).
+- **`main` has no deployment files yet**: `deploy/`, `compose.public.yml` and `scripts/clone-all.sh` arrive with release 3.0.0, so the first deployment uses the `qa` branches (the release candidate) and switches to `main` after the release.
+- **GitHub Actions locked by billing since 2026-10-26**: every job of the organization fails before starting; tests run locally and their output goes in each PR. Needs an owner of `code-corhuila`.
+- **Juan Pablo's repositories are not in `qa` yet** (appointment-api/-app/-db, finance-inventory-api/-db), so `qa` still serves reviews and finances from 2.0.0 until he promotes them.
+- Issues #155, #156 and #167 are fixed in code but still open on the board; they are closed with the release.
 
 ## 4. Plan for next week
--
+- Deploy on the Oracle VM as soon as it exists: secrets on the VM, keys, migrations, HTTPS with Caddy and DuckDNS, the four test scripts against the public host (HU-000-055).
+- Rehearse and time the rollback on the VM (HU-000-057).
+- Release 3.0.0 when the team approves it: `qa` → `main`, tag `v3.0.0` and Releases in the 30 repositories, then switch the VM to `main`.
+- Huawei course: chapter 11 and the third push of [`certification/`](../../certification/).
 
 ## 5. Compliance self-check
-- [ ] Conventional Commits - `type(scope): summary`
-- [ ] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...)
-- [ ] Testable acceptance criteria
-- [ ] Tests added/updated (unit / integration)
-- [ ] DDD / hexagonal boundaries respected (domain has no I/O)
-- [ ] No secrets; config via environment variables
+- [x] Conventional Commits - `type(scope): summary` — every PR and commit of the week (e.g. `feat(auth): lock an e-mail after ten failed sign-ins and answer a taken sign-up like a new one`, `chore(release): promote MVP 3 to qa with cherry-pick -x`).
+- [x] Per-environment HU branch + PR to that environment (hu-xxx-dev -> develop, ...) — fixes by branch → PR → `develop`; promotions by `hu-mvp3-qa` and `hu-mvp3-changelog-qa` → PR → `qa`; nothing pushed directly and `main` untouched.
+- [x] Testable acceptance criteria — #155, #156 and #167 are written as tests (e.g. the 11th failed sign-in in 15 minutes answers 429; an access token is rejected 15 minutes after issue).
+- [x] Tests added/updated (unit / integration) — identity-auth-api 104 tests (+`SignInLockHttpTest`, `RegisterEnumerationTest`, `InMemorySignInFailuresTest`), gateway smoke +4 checks, and the four end-to-end scripts (19/19, 11/11, 34/34, workshop probes).
+- [x] DDD / hexagonal boundaries respected (domain has no I/O) — the sign-in lock is a port in the domain with an in-memory adapter outside it.
+- [x] No secrets; config via environment variables — token lifetimes from `JWT_LIFETIME_SECONDS`; the Oracle API key and the VM's `env/main.env` stay outside git.
 
 ## 6. Evidence links
--
+- Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
+- Deployment guide: https://github.com/code-corhuila/barber-saas-infra-postgres/blob/qa/deploy/oracle/README.md · ADR-019: https://github.com/code-corhuila/barber-saas-docs/pull/170
+- **Complete record of my individual work this week** (2026-11-02 to 2026-11-05 so far, Bogotá time; from git and GitHub across the 30 code repositories, DOCS and WEEKLY):
+  - Pull requests: **35** opened and merged — 3 security fixes (gateway #21, identity-auth-api #27, DOCS #169), 10 promotions to `qa` (2026-11-03), 2 for the Oracle limit (infra-postgres #39, DOCS #170), 10 changelogs to `develop` and their 10 promotions to `qa` (2026-11-05); links in §1.
+  - Commits: **19** new on `develop` of my repositories (identity-auth-api 6, api-gateway 4, infra-postgres 2, and the changelog in the other 7), **106** re-applied on `qa` with `cherry-pick -x` (95 + 11), **3** on `main` of DOCS (`3c1f1d3`, `e645d76`, `912cf0e`), and **2** in this repository (`c6ac5db` week 13 record, `7387098` certification chapters 7–9).
+  - Issues opened: 0 · reviews: the follow-up of Carlos's fix for #165 · tags and releases: 0 (release 3.0.0 pending the team's approval).
+  - Off-GitHub work of the week: the end-to-end runs on the dev platform, the Oracle Cloud account, network and firewall rules, the VM request script, and 12 hours of the Huawei course (chapters 9 and 10).
