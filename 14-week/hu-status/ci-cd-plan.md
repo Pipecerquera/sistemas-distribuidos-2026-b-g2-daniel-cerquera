@@ -93,7 +93,7 @@ Actions is unlocked. CI-01, CI-05 and CI-08 wait for billing, the teacher or the
 ## 6. Delivery health (DORA)
 
 Only what was measured: **time to restore** 40 s for one service (rollback rehearsal on the laptop host,
-2026-11-06); **deployment frequency** two to the public host, the release candidate and the sign-up fix.
+2026-11-06); **deployment frequency** three to the public host, the release candidate, the sign-up fix and the workshop follow-ups.
 **Lead time** and **change failure rate** have no data yet: there is one deployment day and no production
 traffic. They start counting with the first tagged release.
 
