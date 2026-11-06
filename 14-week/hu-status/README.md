@@ -79,8 +79,8 @@
 - Public host: https://barbersaas.chilecentral.cloudapp.azure.com/health
 - Deployment guide: https://github.com/code-corhuila/barber-saas-infra-postgres/blob/qa/deploy/azure/README.md · ADR-020: https://github.com/code-corhuila/barber-saas-docs/blob/main/05-architecture/decisions/records/ADR-020-hosting-azure-for-students.md
 - **Complete record of my individual work this week** (2026-11-02 to 2026-11-06, Bogotá time; from git and GitHub across the 30 code repositories, DOCS and WEEKLY):
-  - Pull requests: **52** opened and merged — 3 security fixes (gateway #21, identity-auth-api #27, DOCS #169), 10 promotions to `qa` (2026-11-03), 2 for the Oracle limit (infra-postgres #39, DOCS #170), 10 changelogs to `develop` and their 10 promotions to `qa` (2026-11-05), 5 for the sign-up fix (DOCS #172, identity-auth-api #31 to #34) and 9 for the workshop follow-ups (DOCS #173 and #174, api-gateway #25 to #27, infra-postgres #42 and #43, identity-auth-api #35 and #36), and 3 for the Azure host (DOCS #175, infra-postgres #44 and #45), all on 2026-11-06. I also merged DOCS #153 this week, opened on 2026-10-29. Each one is listed below.
-  - Commits: **31** new on `develop` of my repositories, **118** re-applied on `qa` with `cherry-pick -x` (95 + 11 + 3 + 9; 1 of them written by a teammate), plus **6** of mine promoted to `qa` by teammates, **10** on `main` of DOCS, and in this repository `c6ac5db` (week 13 record), `7387098`, `c2758f0` and `c4cbe46` (certification), `ad96678`, `9fc6e11` and `bddf479` (week 14 record), and this correction. Each one is listed below.
+  - Pull requests: **53** opened and merged — 3 security fixes (gateway #21, identity-auth-api #27, DOCS #169), 10 promotions to `qa` (2026-11-03), 2 for the Oracle limit (infra-postgres #39, DOCS #170), 10 changelogs to `develop` and their 10 promotions to `qa` (2026-11-05), 5 for the sign-up fix (DOCS #172, identity-auth-api #31 to #34) and 9 for the workshop follow-ups (DOCS #173 and #174, api-gateway #25 to #27, infra-postgres #42 and #43, identity-auth-api #35 and #36), 3 for the Azure host (DOCS #175, infra-postgres #44 and #45) and 1 for the authors of ADR-020 (DOCS #176), all on 2026-11-06. I also merged DOCS #153 this week, opened on 2026-10-29. Each one is listed below.
+  - Commits: **31** new on `develop` of my repositories, **118** re-applied on `qa` with `cherry-pick -x` (95 + 11 + 3 + 9; 1 of them written by a teammate), plus **6** of mine promoted to `qa` by teammates, **11** on `main` of DOCS, and in this repository `c6ac5db` (week 13 record), `7387098`, `c2758f0` and `c4cbe46` (certification), `ad96678`, `9fc6e11` and `bddf479` (week 14 record), and this correction. Each one is listed below.
   - Issues opened: 0, closed: 1, comments: 1, reviews: 0, all listed below · tags and releases: 0 (release 3.0.0 pending the team's approval).
   - Off-GitHub work of the week: the end-to-end runs on the dev platform, the Oracle Cloud account, network and firewall rules, the VM request script, the deployment on the fallback host, the rollback rehearsal, the push test, and 24 hours of the Huawei course (chapters 9 to 12).
 
@@ -261,6 +261,7 @@
 
 | Commit | Date | Subject |
 |---|---|---|
+| [`daafa52`](https://github.com/code-corhuila/barber-saas-docs/commit/daafa5255ad139f34ba471648760c16863f1d16c) | 2026-11-06 | docs(adr): list the whole team as authors of adr-020 |
 | [`72eff48`](https://github.com/code-corhuila/barber-saas-docs/commit/72eff48a4e08651e947e5e58cfceaa384b9aa0dc) | 2026-11-06 | docs(adr): host main on an azure for students vm and supersede adr-019 |
 | [`33a1362`](https://github.com/code-corhuila/barber-saas-docs/commit/33a13622e6775c571ed5ed43fb5b07ce5e87cd6c) | 2026-11-06 | docs(security): record what changed in the tb1 threat model after the workshop |
 | [`731f8c0`](https://github.com/code-corhuila/barber-saas-docs/commit/731f8c018ec5e6917ea84f8d260525de78341e3e) | 2026-11-06 | docs(security): address review on STRIDE for TB1 Internet to edge |
@@ -276,6 +277,7 @@
 
 | Commit | Date | Subject |
 |---|---|---|
+| [`6f02041`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/6f0204121530eb404b2439b31c8fe86e6c24644f) | 2026-11-06 | docs(week-14): record the state of the azure host and chapter 12 |
 | [`c4cbe46`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/c4cbe46fb7655f32d45ac04a7e64cd320b8b8804) | 2026-11-06 | docs(certification): add chapter 12 evidence and study log |
 | [`3c3b6cd`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/3c3b6cd92b1903a031c7e571c36a59a993819b32) | 2026-11-06 | docs(week-14): record the move of the public host to azure |
 | [`6b94ba0`](https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera/commit/6b94ba0733de7eaf1e1518e0a0f8257856149ab0) | 2026-11-06 | docs(week-14): correct the count of the workshop pull requests |
@@ -343,6 +345,7 @@
 | [docs #175](https://github.com/code-corhuila/barber-saas-docs/pull/175) | 2026-11-06 | merged | docs(adr): host main on an azure for students vm and supersede adr-019 |
 | [infra-postgres #44](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/44) | 2026-11-06 | merged | feat(deploy): move the public host to azure and start the platform at boot |
 | [infra-postgres #45](https://github.com/code-corhuila/barber-saas-infra-postgres/pull/45) | 2026-11-06 | merged | feat(deploy): promote the azure host to qa |
+| [docs #176](https://github.com/code-corhuila/barber-saas-docs/pull/176) | 2026-11-06 | merged | docs(adr): list the whole team as authors of adr-020 |
 
 #### Every comment and review I wrote on GitHub
 
