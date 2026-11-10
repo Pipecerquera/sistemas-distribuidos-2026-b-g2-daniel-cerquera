@@ -27,7 +27,8 @@
 | 2026-11-06 | 6 | Chapter 12 | evidence/12-chapter-12.png |
 | 2026-11-08 | 6 | Chapter 13 | evidence/13-chapter-13.png |
 | 2026-11-09 | 6 | Chapter 14 | evidence/14-chapter-14.png |
-| Total | 49 | | |
+| 2026-11-10 | 6 | Review of the course and the course mock exam (passed, 74/100) | evidence/19-final-exam.png |
+| Total | 55 | | |
 
 ## Labs
 
@@ -40,8 +41,9 @@
 
 ## Final exam
 
-- Score: <score>
-- Date: <YYYY-MM-DD>
+- Score: 74 / 100, passed (passing score 70); 23 of 30 closed-ended questions correct, in 14 min 30 s of the 90 allowed. First attempt of the 10 the course allows.
+- Exam: "HCCDP-Solution Architectures Course Mock Exam", the exam of the course on Huawei Talent
+- Date: 2026-11-10
 - Evidence: evidence/19-final-exam.png
 
 ## Skills summary
