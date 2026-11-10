@@ -58,4 +58,10 @@ the teacher on 2026-11-10. If the access is unlocked before 2026-11-15, the labs
 
 ## Skills summary
 
-<5 to 7 lines in English, first person, naming at least three concrete design techniques from the course.>
+During the HCCDP-Solution Architectures course I learned to look at a system through design techniques instead of
+single tools, and I applied three of them to BarberSaaS. The first is a decoupled distributed architecture (chapter 9):
+our eight microservices each own one part of the system and exchange events through the Outbox pattern and a worker,
+which reduces the coupling between services. The second is defense in depth (chapter 7): RS256-signed JWTs validated by
+every service, user roles, BCrypt to protect passwords, a limit on failed sign-in attempts, and HTTPS through Caddy. The
+third is automated deployment with a planned way back (chapter 12): every change moves through develop, qa and main, and
+I rehearsed a rollback that recovered the system in about 40 seconds.
