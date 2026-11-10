@@ -45,8 +45,8 @@ The course page lists 5 labs on the Huawei Cloud lab platform (KooLabs). They re
 real-name authentication, opened in Chrome. My Huawei Talent account (Uniportal), the one I used for the 14 chapters and the
 exam, is not a Huawei Cloud account. Creating one was refused by Huawei Cloud's risk control on every device and network I
 tried, so I could not open any lab. The four screenshots above show each step, with my e-mail hidden. The course itself is
-marked 100% completed and its certificate of completion was issued (see "Final exam"). If the access is unlocked before
-2026-11-15, the labs will replace these rows.
+marked 100% completed and its certificate of completion was issued (see "Final exam"). I reported the blocked access to
+the teacher on 2026-11-10. If the access is unlocked before 2026-11-15, the labs will replace these rows.
 
 ## Final exam
 
