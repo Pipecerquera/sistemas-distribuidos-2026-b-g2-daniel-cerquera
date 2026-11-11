@@ -49,3 +49,29 @@ from the evidence column, not from an opinion.
 **Not passed yet**, by the rule above: M3 and M4 are *partial*. No practice is *not met*, and every open
 P1 has an owner and evidence in progress. It passes when the teammates' issues close and the clean run
 of 2026-11-12 succeeds.
+
+## Update 2026-11-11
+
+**Scope added (M5):** the release candidate was deployed on the Azure host and checked there: every
+worker token against the four outboxes, a real user token against notifications-api, and the
+end-to-end script (31/31). My teammates' security code was reviewed against the token contract.
+
+**New findings, severity first (M9):**
+
+| # | Finding | Practice | Status | Evidence |
+|---|---|---|---|---|
+| 4 | P1 — notifications-api refused every token that names an audience, so the inbox, the push registration and every event of the worker answered 401, including the e-mailed verification codes | M3 | **Fixed** | notifications-api #30 → #31 → #32; to `main` in #29, waiting for the teacher |
+| 5 | P2 — platform-admin-api relayed its outbox and ran its daily jobs for any worker token, and allowed 100 events per read | M3 (#159, #160) | **Fixed** | platform-admin-api #31–#33 and #35–#37; to `main` in #34, waiting for the teacher |
+| 6 | P3 — the outbox contracts said 1–100 while the code caps at 50 | — | **Fixed, waiting for the teacher** | DOCS #181 |
+
+**Status of each practice:**
+
+| Practice | 2026-11-10 | 2026-11-11 | Why |
+|---|---|---|---|
+| M3 grave findings closed | Partial | **Met** | #158, #159, #160, #163 and #164 closed by their owners; every row of the four threat models has a decision (DOCS #179, #180); the only open security issue is #157, a P2 with its reason |
+| M4 manual executed | Partial | **Partial** | The host followed the README's update steps without a manual fix, but the platform was not started from a clean folder |
+| M8 money | Met | **Met** | `main` keeps the simulator off; the Wompi sandbox needs a merchant account the team does not have (#157); the demo host's simulator is declared |
+| M1, M2, M5, M6, M7, M9 | Met | **Met** | No change |
+
+**Verdict (M6), by the rule above:** no practice is *not met* and no P0 or P1 finding is open. M4 stays
+*partial* until the clean-folder start is done.
