@@ -71,7 +71,7 @@ Severity first (M9):
 ## 4. Plan for next week
 - Done this week instead of next: presentation (2026-11-12), tags and Releases, `c3-release` and `c3-project` on Moodle.
 - Moodle `c3-sprints` (closes 2026-11-15): this report and weeks 11–16.
-- Week 16: answer the teacher's review of the final project, keep `main` and the Releases as delivered, and record the week.
+- Week 16: grading week, no sprint — the teacher publishes the grades of the cut.
 
 ## 5. Compliance self-check
 - [x] Conventional Commits - `type(scope): summary` — e.g. `fix(auth): read the audience of each token by route instead of refusing every token that names one`, `fix(security): relay the outbox only with outbox:relay and run the daily jobs only with jobs:run`, `docs(api): cap the outbox limit at fifty in the four producer contracts`.
