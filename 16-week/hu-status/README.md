@@ -42,3 +42,10 @@
 - Repo: https://github.com/Pipecerquera/sistemas-distribuidos-2026-b-g2-daniel-cerquera.git
 - Final project and release of the cut: [week 15](../../15-week/hu-status/README.md) (HU-000-095 to HU-000-098)
 - Releases: https://github.com/code-corhuila/barber-saas-docs/releases/tag/v3.0.0
+- This week's infographic: `16-week/hu-status/Week-16.jpg` (in this same folder)
+
+### Complete evidence of the week, item by item (checked against git and GitHub, 2026-11-16 to 2026-11-18)
+- Commits, pull requests, reviews, comments and issues in the BarberSaaS repositories of `code-corhuila` (the 30 code repositories and DOCS): **none**. The repositories stay at their `v3.0.0` Releases.
+- Course close items (final presentation, documentation set, handover): already done and delivered in week 15 — presentation on 2026-11-12 (HU-000-096) and package `c3-project` with README, diagrams, ADRs, OpenAPI contracts, runbooks, CHANGELOG, failure path and handover (HU-000-098).
+
+![Resumen Semana 16](Week-16.jpg)
